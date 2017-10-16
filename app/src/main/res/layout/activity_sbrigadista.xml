@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.adrian.appe.Sbrigadista">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Líder de brigadistas"
+                android:textAllCaps="false"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\nEste tipo de usuario tiene organizado un grupo de voluntarios con conocimientos adecuados capaces de ejercer como brigadistas. Tiene la información de otros voluntarios y es capaz de organizarlos para ayudar donde se necesite. Es capaz de compartir sus conocimientos a otras personas, por lo que puede organizar grupos de capacitación para sumarse a su equipo de trabajo. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar.\n"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="italic"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Con qué experiencia de este tipo cuentas?"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/txt_Experienciabrigada"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Qué certificados tienes?"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agrega una breve descripción y archivo visual del documento"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_certificadoBrigadistas"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquí va un archivo de imágen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Qué actividades realiza tu brigada ?"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Recoger escombros"
+                android:id="@+id/chk_Recoger_escombros"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Acordonar el área"
+                android:id="@+id/chk_Acordonar_area"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Revisión de estructuras"
+                android:id="@+id/chk_Revision_estructuras"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Red eléctrica"
+                android:id="@+id/chk_Red_electrica"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Carpintería"
+                android:id="@+id/chk_Carpinteria"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Manejo de sustancias químicas peligrosas"
+                android:id="@+id/chk_Sustancias_quimicas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Construcción"
+                android:id="@+id/chk_Construccion"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Primeros auxilios"
+                android:id="@+id/chk_Primeros_auxilios"
+                android:textColor="@android:color/black" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Otros(+)"
+                android:id="@+id/txt_Otrobrigadista"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de los miembros que dispone"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favor de ingresar nombre por nombre."
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/txt_NombreBrigadista"
+                    android:layout_width="270sp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ingresar"
+                    android:id="@+id/btn_Ingresarbrigadista"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zonas en las que puedes trabajar"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/chk_Zona1brigadista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Zona1"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_Zona2brigadista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Zona2"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:id="@+id/chk_Zona3brigadista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Zona3"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Favor de anexar imagenes que prueben tu actividad"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Días disponibles"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Lunes"
+                android:id="@+id/chk_LunesBrigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Martes"
+                android:id="@+id/chk_MartesBrigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Miércoles"
+                android:id="@+id/chk_MiercolesBrigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Jueves"
+                android:id="@+id/chk_JuevesBrigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Viernes"
+                android:id="@+id/chk_ViernesBrigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Sábado"
+                android:id="@+id/chk_SabadoBrigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Domingo"
+                android:id="@+id/chk_DomingoBrigadistas"
+                android:textColor="@android:color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario deseado"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      02:00-06:00"
+                android:id="@+id/chk_0206_brigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      06:00-10:00"
+                android:id="@+id/chk_0610_brigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      10:00-14:00"
+                android:id="@+id/chk_1014_brigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      14:00-18:00"
+                android:id="@+id/chk_1418_brigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      18:00-22:00"
+                android:id="@+id/chk_1822_brigadistas"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      22:00-02:00"
+                android:id="@+id/chk_2202_brigadistas"
+                android:textColor="@android:color/black" />
+            <Button
+                android:id="@+id/btn_EnviarRegistro_Brigadista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:text="Enviar registro"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

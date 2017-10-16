@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.adrian.appe.Salbergue">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Administrador de albergue"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="\nEste tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.\n"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿En qué zona te encuentras?"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <CheckBox
+                android:id="@+id/chk_Zona1_Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Zona1"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_Zona2_Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Zona2"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:id="@+id/chk_Zona3_Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Zona3"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirección del lugar afectado"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <CheckBox
+                android:id="@+id/chk_Lugar1_Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Lugar1"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_Lugar2_Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Lugar2"
+                android:textColor="@android:color/black" />
+            <CheckBox
+                android:id="@+id/chk_Lugar3_Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Lugar3"
+                android:textColor="@android:color/black" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Agregar lugar (+) "
+                android:id="@+id/txt_Lugar_Albergue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar lugar (éste es un submenú)"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dirección del albergue"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/chk_DireccionAlbergue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción del albergue"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/chk_DescripcionAlbergue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacidad"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/chk_CapacidadAlbergue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Residentes que se aceptan"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <CheckBox
+                android:id="@+id/chk_ResidentesMixtoAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Mixto"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_ResidentesHombresAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Hombres"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_ResidentesMujeresAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Mujeres"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_ResidentesNinosAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Niños"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_ResidentesMascotasAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Mascotas"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fotos del albergue"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquí va un archivo de imágen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Qué actividades realizas en el albergue?"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agrega una breve descripción de las actividades que realizas"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_actividades_Albergue"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aquí va un archivo de imágen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Días disponibles"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/chk_LunesAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Lunes"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_MartesAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Martes"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_MiercolesAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Miércoles"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_JuevesAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Jueves"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_ViernesAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Viernesp"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_SabadoAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Sábado"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_DomingoAlbergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      Domingo"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Horario deseado"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/chk_0206Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      02:00-06:00"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_0610Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      06:00-10:00"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_1014Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      10:00-14:00"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_1418Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      14:00-18:00"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_1822Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      18:00-22:00"
+                android:textColor="@android:color/black" />
+
+            <CheckBox
+                android:id="@+id/chk_2202Albergue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="      22:00-02:00"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btn_EnviarRegistroAlbergue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:text="Enviar registro"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
