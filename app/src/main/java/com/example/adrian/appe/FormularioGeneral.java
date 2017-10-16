@@ -15,6 +15,7 @@ public class FormularioGeneral extends AppCompatActivity {
     Button btnSdesastre;
     Button btnSacopio;
     Button btnSalbergue;
+    //hola mundo!
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
