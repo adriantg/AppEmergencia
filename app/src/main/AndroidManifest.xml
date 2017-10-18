@@ -23,7 +23,8 @@
         <activity android:name=".Sparamedico" />
         <activity android:name=".Sdesastre" />
         <activity android:name=".Sacopio" />
-        <activity android:name=".Salbergue"></activity>
+        <activity android:name=".Salbergue" />
+        <activity android:name=".Ingresa"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,9 @@ import android.widget.Button;
 
 public class FormularioGeneral extends AppCompatActivity {
 
+    Button btnIngresa;
+    Button btnVerificado;
+
     Button btnSweb;
     Button btnSbrigadista;
     Button btnStransporte;
@@ -15,12 +18,34 @@ public class FormularioGeneral extends AppCompatActivity {
     Button btnSdesastre;
     Button btnSacopio;
     Button btnSalbergue;
-    //hola mundo!
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_general);
+
+        btnIngresa=(Button)findViewById(R.id.btn_Ingresa);
+        btnIngresa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(FormularioGeneral.this,Ingresa.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btnVerificado=(Button)findViewById(R.id.btn_Verificado);
+        btnVerificado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(FormularioGeneral.this,Inicio.class);
+                startActivity(intent);
+
+            }
+        });
 
         btnSweb=(Button)findViewById(R.id.chk_Sweb);
         btnSweb.setOnClickListener(new View.OnClickListener() {
