@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 public class FormularioGeneral extends AppCompatActivity {
 
@@ -19,11 +20,37 @@ public class FormularioGeneral extends AppCompatActivity {
     Button btnSacopio;
     Button btnSalbergue;
 
+    CheckBox chkFemenino;
+    CheckBox chkMasculino;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_general);
+
+        chkFemenino=(CheckBox) findViewById(R.id.chk_Femenino);
+        chkMasculino=(CheckBox)findViewById(R.id.chk_Masculino);
+        chkFemenino.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chkFemenino.toggle();
+                if(chkMasculino.isChecked()){
+                    chkMasculino.toggle();
+                }
+
+            }
+        });
+        chkMasculino.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chkMasculino.toggle();
+                if(chkFemenino.isChecked()){
+                    chkFemenino.toggle();
+                }
+
+            }
+        });
 
         btnIngresa=(Button)findViewById(R.id.btn_Ingresa);
         btnIngresa.setOnClickListener(new View.OnClickListener() {

@@ -16,14 +16,35 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <android.support.v4.widget.Space
                 android:layout_width="wrap_content"
+                android:layout_height="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Usuario Web"
-                android:textAllCaps="false"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"/>
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Usuario Web"
+                    android:textAllCaps="false"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_weight="5"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/btn_Regresar"
+                    android:background="@android:drawable/ic_menu_revert"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:textAlignment="center"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -171,78 +192,91 @@
                 android:layout_height="wrap_content"
                 android:text="      Protección Civil"
                 android:id="@+id/chk_Proteccion"
+                android:onClick="Proteccion"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Sismológico Nacional"
                 android:id="@+id/chk_Sismologico"
+                android:onClick="Sismologico"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Meteorológico Nacional"
                 android:id="@+id/chk_Meteorologico"
+                android:onClick="Meteorologico"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Cruz Roja"
                 android:id="@+id/chk_Cruzroja"
+                android:onClick="Cruzroja"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Gobierno Local"
                 android:id="@+id/chk_Gobiernolocal"
+                android:onClick="Glocal"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Gobierno Federal"
                 android:id="@+id/chk_Gobiernofederal"
+                android:onClick="Gfederal"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Policía Federal"
                 android:id="@+id/chk_Policiafederal"
+                android:onClick="Pfederal"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Bomberos"
                 android:id="@+id/chk_Bomberos"
+                android:onClick="Bomberos"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      SEDENA"
                 android:id="@+id/chk_SEDENA"
+                android:onClick="Sedena"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      SEP"
                 android:id="@+id/chk_SEP"
+                android:onClick="Sep"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      UNAM"
                 android:id="@+id/chk_UNAM"
+                android:onClick="Unam"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      IPN"
                 android:id="@+id/chk_IPN"
+                android:onClick="Ipn"
                 android:textColor="@android:color/black" />
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      UAM"
                 android:id="@+id/chk_UAM"
+                android:onClick="Uam"
                 android:textColor="@android:color/black" />
             <Button
                 android:id="@+id/btn_EnviarRegistroWeb"
