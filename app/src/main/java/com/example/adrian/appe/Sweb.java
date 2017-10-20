@@ -50,8 +50,6 @@ public class Sweb extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                CheckBox casilla=(CheckBox)findViewById(R.id.chk_Sweb);
-                casilla.toggle();
                 Intent intent=new Intent(Sweb.this,FormularioGeneral.class);
                 startActivity(intent);
 

@@ -21,8 +21,7 @@ public class Stransporte extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                CheckBox casilla=(CheckBox)findViewById(R.id.chk_STransporte);
-                casilla.toggle();
+
                 Intent intent=new Intent(Stransporte.this,FormularioGeneral.class);
                 startActivity(intent);
 

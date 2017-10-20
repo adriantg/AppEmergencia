@@ -21,8 +21,6 @@ public class Sbrigadista extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                CheckBox casilla=(CheckBox)findViewById(R.id.chk_Sbrigada);
-                casilla.toggle();
                 Intent intent=new Intent(Sbrigadista.this,FormularioGeneral.class);
                 startActivity(intent);
 

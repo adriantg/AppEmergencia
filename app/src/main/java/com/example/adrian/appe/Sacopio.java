@@ -21,8 +21,6 @@ public class Sacopio extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                CheckBox casilla=(CheckBox)findViewById(R.id.chk_Sacopio);
-                casilla.toggle();
                 Intent intent=new Intent(Sacopio.this,FormularioGeneral.class);
                 startActivity(intent);
 

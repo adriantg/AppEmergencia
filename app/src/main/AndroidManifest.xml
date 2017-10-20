@@ -16,15 +16,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormularioGeneral" />
-        <activity android:name=".Sweb" />
-        <activity android:name=".Stransporte" />
-        <activity android:name=".Sbrigadista" />
-        <activity android:name=".Sparamedico" />
-        <activity android:name=".Sdesastre" />
-        <activity android:name=".Sacopio" />
-        <activity android:name=".Salbergue" />
-        <activity android:name=".Ingresa"></activity>
+        <activity android:name=".FormularioGeneral"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Sweb"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Stransporte"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Sbrigadista"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Sparamedico"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Sdesastre"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Sacopio"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Salbergue"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".Ingresa"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
     </application>
 
 </manifest>

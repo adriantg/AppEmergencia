@@ -21,8 +21,6 @@ public class Sdesastre extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                CheckBox casilla=(CheckBox)findViewById(R.id.chk_Szona);
-                casilla.toggle();
                 Intent intent=new Intent(Sdesastre.this,FormularioGeneral.class);
                 startActivity(intent);
 

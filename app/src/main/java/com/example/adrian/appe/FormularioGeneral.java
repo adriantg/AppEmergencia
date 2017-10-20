@@ -31,26 +31,6 @@ public class FormularioGeneral extends AppCompatActivity {
 
         chkFemenino=(CheckBox) findViewById(R.id.chk_Femenino);
         chkMasculino=(CheckBox)findViewById(R.id.chk_Masculino);
-        chkFemenino.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chkFemenino.toggle();
-                if(chkMasculino.isChecked()){
-                    chkMasculino.toggle();
-                }
-
-            }
-        });
-        chkMasculino.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                chkMasculino.toggle();
-                if(chkFemenino.isChecked()){
-                    chkFemenino.toggle();
-                }
-
-            }
-        });
 
         btnIngresa=(Button)findViewById(R.id.btn_Ingresa);
         btnIngresa.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +54,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        btnSweb=(Button)findViewById(R.id.chk_Sweb);
+        btnSweb=(Button)findViewById(R.id.btn_Sweb);
         btnSweb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +63,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        btnSbrigadista=(Button)findViewById(R.id.chk_Sbrigada);
+        btnSbrigadista=(Button)findViewById(R.id.btn_Sbrigada);
         btnSbrigadista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,7 +72,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        btnStransporte=(Button)findViewById(R.id.chk_STransporte);
+        btnStransporte=(Button)findViewById(R.id.btn_STransporte);
         btnStransporte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -101,7 +81,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        btnSparamedico=(Button)findViewById(R.id.chk_SParamedico);
+        btnSparamedico=(Button)findViewById(R.id.btn_SParamedico);
         btnSparamedico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -110,7 +90,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        btnSdesastre=(Button)findViewById(R.id.chk_Szona);
+        btnSdesastre=(Button)findViewById(R.id.btn_Szona);
         btnSdesastre.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,7 +99,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        btnSacopio=(Button)findViewById(R.id.chk_Sacopio);
+        btnSacopio=(Button)findViewById(R.id.btn_Sacopio);
         btnSacopio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +108,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        btnSalbergue=(Button)findViewById(R.id.chk_Salbergue);
+        btnSalbergue=(Button)findViewById(R.id.btn_Salbergue);
         btnSalbergue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,4 +117,15 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
     }
+
+    public void Femenino(View Checkbox){
+        chkMasculino.setChecked(false);
+        chkFemenino.setChecked(true);
+    }
+
+    public void Masculino(View Checkbox){
+        chkMasculino.setChecked(true);
+        chkFemenino.setChecked(false);
+    }
+
 }

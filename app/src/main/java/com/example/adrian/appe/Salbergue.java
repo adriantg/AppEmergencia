@@ -21,8 +21,6 @@ public class Salbergue extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                CheckBox casilla=(CheckBox)findViewById(R.id.chk_Salbergue);
-                casilla.toggle();
                 Intent intent=new Intent(Salbergue.this,FormularioGeneral.class);
                 startActivity(intent);
 
