@@ -7,9 +7,10 @@
     android:orientation="vertical"
     tools:context="com.example.adrian.appe.FormularioGeneral">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_orange_light"
-                    android:text="Verificado"
+                    android:text="@string/verificado"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold" />
 
@@ -57,7 +58,7 @@
             <android.support.v4.widget.Space
                 android:layout_width="wrap_content"
                 android:layout_height="5dp" />
-            
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -77,6 +78,7 @@
                 android:textStyle="italic"
                 />
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,6 +87,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -529,6 +532,13 @@
                 android:textSize="16sp"
                 android:textStyle="normal" />
 
+            <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spin_Usuarios">
+
+            </Spinner>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -594,5 +604,8 @@
 
         </LinearLayout>
 
-    </ScrollView>
+        </ScrollView>
+
+
+
 </LinearLayout>
