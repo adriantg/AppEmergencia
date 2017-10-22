@@ -72,7 +72,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Usuario: "
+                        android:text="Usuario:  "
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         android:textStyle="normal"
@@ -94,7 +94,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Contraseña: "
+                        android:text="Contraseña:  "
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         android:textStyle="normal"
