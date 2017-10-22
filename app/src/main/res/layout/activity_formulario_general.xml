@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_orange_light"
-                    android:text="@string/verificado"
+                    android:text="verificado"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold" />
 
@@ -532,13 +532,21 @@
                 android:textSize="16sp"
                 android:textStyle="normal" />
 
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
             <Spinner
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/spin_Usuarios">
-
             </Spinner>
 
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+            <!--
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -601,6 +609,7 @@
                     android:text="Verificar información en centro de acopio"
                     android:textColor="@android:color/white" />
             </LinearLayout>
+            -->
 
         </LinearLayout>
 
