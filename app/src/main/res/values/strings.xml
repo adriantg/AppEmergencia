@@ -1,7 +1,17 @@
 <resources>
     <string name="app_name">App E</string>
-
-
+    <string name="Datos_de_contacto">Datos de contacto:</string>
+    <string name="Direccion_web">Dirección web:</string>
+    <string name="Telefonos">Teléfonos:</string>
+    <string name="Correo_electronico">Correo electrónico:</string>
+    <string name="Facebook">Facebook:</string>
+    <string name="Twitter">Twitter:</string>
+    <string name="Comunicados">Comunicados:</string>
+    <string name="Titulo">Título:</string>
+    <string name="Hora">Hora:</string>
+    <string name="Imagen">Imagen:</string>
+    <string name="Descripcion">Descripción:</string>
+    <string name="Liga">Liga:</string>
 
 
 
