@@ -10,6 +10,7 @@ public class Inicio extends AppCompatActivity {
 
     Button btnRegistro;
     Button btnIngresa;
+    Button btnWeb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,5 +38,18 @@ public class Inicio extends AppCompatActivity {
 
             }
         });
+
+        btnWeb=(Button)findViewById(R.id.btn_Web);
+        btnWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(Inicio.this,Web.class);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 }
