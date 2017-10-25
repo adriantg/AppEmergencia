@@ -27,8 +27,8 @@ public class Web extends AppCompatActivity {
 
         lManager= new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
-
-        adapter=new ComunicadoWebAdapter(items);
+    //Error de RecyclerView estás generando el adapter
+    //    adapter=new ComunicadoWebAdapter(items);
         recycler.setAdapter(adapter);
         //Fin recyclerView
 
