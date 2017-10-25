@@ -13,11 +13,46 @@
     <string name="Descripcion">Descripción:</string>
     <string name="Liga">Liga:</string>
     <string name="Web">Web</string>
-
-
-
-
-
+    <string name="Verificado">VERIFICADO</string>
+    <string name="Ingresa">INGRESA</string>
+    <string name="Registro">REGISTRO</string>
+    <string name="Iniciar_sesion">Iniciar sesión</string>
+    <string name="Usuario">Usuario: </string>
+    <string name="Contraseña">Contraseña: </string>
+    <string name="Administrador_centro_acopio">Administrador de centro de acopio       </string>
+    <string name="Descripción_Administrador_centro_acopio">"\nEste tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.\n"</string>
+    <string name="Pregunta_zona">¿En qué zona te encuentras?</string>
+    <string name="Zona1">     Zona 1</string>
+    <string name="Zona2">     Zona 2</string>
+    <string name="Zona3">     Zona 3</string>
+    <string name="Direccion_lugar_afectado">Dirección del lugar afectado</string>
+    <string name="Lugar1">Lugar 1</string>
+    <string name="Lugar2">Lugar 2</string>
+    <string name="Lugar3">Lugar 3</string>
+    <string name="Agregar_lugar">Agregar lugar (+)</string>
+    <string name="Agregar_lugar_submenu">Agregar lugar (este es un submenú)</string>
+    <string name="Direccion_centro_acopio">Dirección del centro de acopio</string>
+    <string name="Descripcion_centro_acopio">Descripción del centro de acopio</string>
+    <string name="Fotos_centro_acopio">Fotos del centro de acopio</string>
+    <string name="Archivo_imagen">Aquí va un archivo de imagen</string>
+    <string name="Pregunta_actividades_centro_acopio">¿Qué actividades realizas en el centro de acopio?</string>
+    <string name="Descripcion_actividades_centro_acopio">Agrega una breve descripción de las actividades que realizas</string>
+    <string name="Dias_disponibles">Días dispinibles</string>
+    <string name="Lunes">Lunes</string>
+    <string name="Martes">Martes</string>
+    <string name="Miercoles">Miércoles</string>
+    <string name="Jueves">Jueves</string>>
+    <string name="Viernes">Viernes</string>
+    <string name="Sabado">Sábado</string>
+    <string name="Domingo">Domingo</string>
+    <string name="Horario">Horario deseado</string>
+    <string name="Dos_a_seis">02:00-06:00</string>
+    <string name="Seis_a_diez">06:00-10:00</string>
+    <string name="Diez_a_catorce">10:00-14:00</string>
+    <string name="Catorce_a_dieciocho">14:00-18:00</string>
+    <string name="Dieciocho_a_veintidos">18:00-22:00</string>
+    <string name="Veintidos_a_dos">22:00-02:00</string>
+    <string name="Enviar_registro">ENVIAR REGISTRO</string>
 
 
 
