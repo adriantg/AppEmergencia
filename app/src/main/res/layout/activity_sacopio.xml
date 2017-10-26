@@ -24,21 +24,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <!--TÍTULO ADMINISTRADOR DE CENTRO DE ACOPIO -->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Administrador de centro de acopio"
+                    android:text="@string/Administrador_centro_acopio"
                     android:textAllCaps="false"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
                     android:layout_weight="5"/>
-
+                <!--Botón Regresar -->
                 <Button
+                    android:id="@+id/btn_Regresar_Sacopio"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/btn_Regresar"
                     android:background="@android:drawable/ic_menu_revert"
                     android:backgroundTint="@android:color/holo_green_dark"
                     android:textAlignment="center"
@@ -46,268 +47,281 @@
 
             </LinearLayout>
 
+            <!--Descripción administrador del centro de acopio -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nEste tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.\n"
+                android:text="@string/Descripción_Administrador_centro_acopio"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
+            <!--SECCIÓN PREGUNTA ZONA -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿En qué zona te encuentras?"
+                android:text="@string/Pregunta_zona"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
+            <!--Checkbox Zona 1 -->
             <CheckBox
-                android:id="@+id/chk_Zona1_Acopio"
+                android:id="@+id/chk_Zona1_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Zona1"
+                android:text="@string/Zona1"
+                android:textColor="@android:color/black" />
+            <!--Checkbox Zona 2 -->
+            <CheckBox
+                android:id="@+id/chk_Zona2_Sacopio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Zona2"
+                android:textColor="@android:color/black" />
+            <!--Checkbox Zona 3 -->
+            <CheckBox
+                android:id="@+id/chk_Zona3_Sacopio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Zona3"
                 android:textColor="@android:color/black" />
 
-            <CheckBox
-                android:id="@+id/chk_Zona2_Acopio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      Zona2"
-                android:textColor="@android:color/black" />
-            <CheckBox
-                android:id="@+id/chk_Zona3_Acopio"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      Zona3"
-                android:textColor="@android:color/black" />
-
+            <!--SECCIÓN LUGAR AFECTADO -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dirección del lugar afectado"
+                android:text="@string/Direccion_lugar_afectado"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
+            <!--Checkbox LUGAR 1 -->
             <CheckBox
-                android:id="@+id/chk_Lugar1_Acopio"
+                android:id="@+id/chk_Lugar1_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Lugar1"
+                android:text="@string/Lugar1"
                 android:textColor="@android:color/black" />
-
+            <!--Checkbox LUGAR 2 -->
             <CheckBox
-                android:id="@+id/chk_Lugar2_Acopio"
+                android:id="@+id/chk_Lugar2_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Lugar2"
+                android:text="@string/Lugar2"
                 android:textColor="@android:color/black" />
+            <!--Checkbox LUGAR 3 -->
             <CheckBox
-                android:id="@+id/chk_Lugar3_Acopio"
+                android:id="@+id/chk_Lugar3_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Lugar3"
+                android:text="@string/Lugar3"
                 android:textColor="@android:color/black" />
+            <!--Opción Agregar lugar(+) -->
             <EditText
+                android:id="@+id/txt_Agregar_Lugar_Sacopio"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Agregar lugar (+) "
-                android:id="@+id/txt_Lugar_acopio"/>
+                android:text="@string/Agregar_lugar"/>
 
+            <!--SECCIÓN AGREGAR LUGAR (ESTE ES UN SUBMENÚ) -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agregar lugar (éste es un submenú)"
+                android:text="@string/Agregar_lugar_submenu"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
+            <!--Dirección centro de acopio -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dirección del centro de acopio"
+                android:text="@string/Direccion_centro_acopio"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
-
+            <!--Agregar dirección centro de acopio -->
             <EditText
-                android:id="@+id/chk_DireccionAcopio"
+                android:id="@+id/txt_Direccion_cento_acopio_Sacopio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-
+            <!--Descripción centro de acopio -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Descripción del centro de acopio"
+                android:text="@string/Direccion_centro_acopio"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
-
+            <!--Agregar Descripción centro de acopio -->
             <EditText
-                android:id="@+id/chk_DescripcionAcopio"
+                android:id="@+id/chk_Descripcion_Centro_Acopio_Sacopio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+            <!--Fotos del centro de acopio -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fotos del centro de acopio"
+                android:text="@string/Fotos_centro_acopio"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
-
+            <!--Agregar archivo de imagen -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Aquí va un archivo de imágen"/>
+                android:text="@string/Archivo_imagen"/>
 
+            <!--SECCIÓN ¿QUÉ ACTIVIDADES REALIZAS EN EL CNETRO DE ACOPIO? -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿Qué actividades realizas en el centro de acopio?"
+                android:text="@string/Pregunta_actividades_centro_acopio"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
-
+            <!--Descripción actividades realizadas -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agrega una breve descripción de las actividades que realizas"
+                android:text="@string/Descripcion_actividades_centro_acopio"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal"/>
-
+            <!--Agregar descripción actividades realizadas -->
+            <EditText
+                android:id="@+id/txt_actividades_Sacopio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <!--Agregar archivo de imagen -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txt_actividades_Acopio"/>
+                android:text="@string/Archivo_imagen"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Aquí va un archivo de imágen"/>
-
+            <!--SECCIÓN DIAS DISPONIBLES -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Días disponibles"
+                android:text="@string/Dias_disponibles"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
+            <!--Lunes -->
             <CheckBox
-                android:id="@+id/chk_LunesAcopio"
+                android:id="@+id/chk_Lunes_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Lunes"
+                android:text="@string/Lunes"
                 android:textColor="@android:color/black" />
-
+            <!--Martes -->
             <CheckBox
-                android:id="@+id/chk_MartesAcopio"
+                android:id="@+id/chk_Martes_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Martes"
+                android:text="@string/Martes"
                 android:textColor="@android:color/black" />
-
+            <!--Miércoles -->
             <CheckBox
-                android:id="@+id/chk_MiercolesAcopio"
+                android:id="@+id/chk_Miercoles_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Miércoles"
+                android:text="@string/Miercoles"
                 android:textColor="@android:color/black" />
-
+            <!--LJueves-->
             <CheckBox
-                android:id="@+id/chk_JuevesAcopio"
+                android:id="@+id/chk_Jueves_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Jueves"
+                android:text="@string/Jueves"
                 android:textColor="@android:color/black" />
-
+            <!--Viernes -->
             <CheckBox
-                android:id="@+id/chk_ViernesAcopio"
+                android:id="@+id/chk_Viernes_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Viernesp"
+                android:text="@string/Viernes"
                 android:textColor="@android:color/black" />
-
+            <!--Sábado -->
             <CheckBox
-                android:id="@+id/chk_SabadoAcopio"
+                android:id="@+id/chk_Sabado_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Sábado"
+                android:text="@string/Sabado"
                 android:textColor="@android:color/black" />
-
+            <!--Domingo -->
             <CheckBox
-                android:id="@+id/chk_DomingoAcopio"
+                android:id="@+id/chk_Domingo_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      Domingo"
+                android:text="@string/Domingo"
                 android:textColor="@android:color/black" />
 
-
+            <!--SECCIÓN HORARIO DESEADO -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Horario deseado"
+                android:text="@string/Horario"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
+            <!--02:00-06:00-->
             <CheckBox
-                android:id="@+id/chk_0206Acopio"
+                android:id="@+id/chk_0206_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      02:00-06:00"
+                android:text="@string/Dos_a_seis"
                 android:textColor="@android:color/black" />
-
+            <!--06:00-10:00-->
             <CheckBox
-                android:id="@+id/chk_0610Acopio"
+                android:id="@+id/chk_0610_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      06:00-10:00"
+                android:text="@string/Seis_a_diez"
                 android:textColor="@android:color/black" />
-
+            <!--10:00-14:00-->
             <CheckBox
-                android:id="@+id/chk_1014Acopio"
+                android:id="@+id/chk_1014_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      10:00-14:00"
+                android:text="@string/Diez_a_catorce"
                 android:textColor="@android:color/black" />
-
+            <!--14:00-18:00-->
             <CheckBox
-                android:id="@+id/chk_1418Acopio"
+                android:id="@+id/chk_1418_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      14:00-18:00"
+                android:text="@string/Catorce_a_dieciocho"
                 android:textColor="@android:color/black" />
-
+            <!--18:00-22:00-->
             <CheckBox
-                android:id="@+id/chk_1822Acopio"
+                android:id="@+id/chk_1822_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      18:00-22:00"
+                android:text="@string/Dieciocho_a_veintidos"
                 android:textColor="@android:color/black" />
-
+            <!--22:00-02:00-->
             <CheckBox
-                android:id="@+id/chk_2202Acopio"
+                android:id="@+id/chk_2202_Sacopio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      22:00-02:00"
+                android:text="@string/Veintidos_a_dos"
                 android:textColor="@android:color/black" />
 
+            <!--BOTÓN ENVIAR REGISTRO-->
             <Button
-                android:id="@+id/btn_EnviarRegistroAcopio"
+                android:id="@+id/btn_Enviar_Registro_Sacopio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_dark"
-                android:text="Enviar registro"
+                android:text="@string/Enviar_registro"
                 android:textStyle="bold" />
 
         </LinearLayout>
