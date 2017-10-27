@@ -17,7 +17,7 @@ public class Ingresa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingresa);
 
-        btnRegistro=(Button)findViewById(R.id.btn_Registro);
+        btnRegistro=(Button)findViewById(R.id.btn_Registro_Ingresa);
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +28,7 @@ public class Ingresa extends AppCompatActivity {
             }
         });
 
-        btnVerificado=(Button)findViewById(R.id.btn_Verificado);
+        btnVerificado=(Button)findViewById(R.id.btn_Verificado_Ingresa);
         btnVerificado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

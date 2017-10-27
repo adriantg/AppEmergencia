@@ -17,7 +17,7 @@ public class Inicio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
 
-        btnRegistro=(Button)findViewById(R.id.btn_Registro);
+        btnRegistro=(Button)findViewById(R.id.btn_Registro_Inicio);
         btnRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +28,7 @@ public class Inicio extends AppCompatActivity {
             }
         });
 
-        btnIngresa=(Button)findViewById(R.id.btn_Ingresa);
+        btnIngresa=(Button)findViewById(R.id.btn_Ingresa_Inicio);
         btnIngresa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

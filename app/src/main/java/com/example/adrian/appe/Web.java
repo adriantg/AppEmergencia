@@ -23,7 +23,7 @@ public class Web extends AppCompatActivity {
         items.add(new ComunicadoWeb("Ejemplo1","01:47 23/10/2017","Esto es un ejemplo","www.ejemplo.com"));
 
         recycler=(RecyclerView)findViewById(R.id.recycler_Web_Institucion1);
-        recycler.setHasFixedSize(true);
+        //recycler.setHasFixedSize(true);
 
         lManager= new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);

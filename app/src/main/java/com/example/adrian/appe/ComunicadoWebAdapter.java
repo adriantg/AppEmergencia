@@ -1,4 +1,5 @@
 package com.example.adrian.appe;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,9 +23,11 @@ public class ComunicadoWebAdapter extends RecyclerView.Adapter<ComunicadoWebAdap
         public TextView hora;
         public TextView descripcion;
         public TextView liga;
+        public CardView cv;
 
         public ComunicadoWebViewHolder(View v){
             super(v);
+            cv=(CardView)v.findViewById(R.id.cdv_Comunicado_Web);
             titulo=(TextView)v.findViewById(R.id.txt_Titulo_Comunicado_Web);
             hora=(TextView)v.findViewById(R.id.txt_Hora_Comunicado_Web);
             descripcion=(TextView)v.findViewById(R.id.txt_Descripcion_Comunicado_Web);
@@ -53,6 +56,11 @@ public class ComunicadoWebAdapter extends RecyclerView.Adapter<ComunicadoWebAdap
         viewHolder.hora.setText(items.get(i).getHora());
         viewHolder.descripcion.setText(items.get(i).getDescripcion());
         viewHolder.liga.setText(items.get(i).getLiga());
+    }
+
+    @Override
+    public void onAttachedToRecyclerView(RecyclerView recyclerView) {
+        super.onAttachedToRecyclerView(recyclerView);
     }
 
 }

@@ -55,9 +55,10 @@
 
 
             </LinearLayout>
+
             <!--Botón WEB -->
             <Button
-                android:id="@+id/btn_Web_Inicio"
+                android:id="@+id/btn_Web"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Web" />
