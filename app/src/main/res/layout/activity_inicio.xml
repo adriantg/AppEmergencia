@@ -20,44 +20,44 @@
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="horizontal">
-
+                <!--Botón Verificado -->
                 <Button
-                    android:id="@+id/btn_Verificado"
+                    android:id="@+id/btn_Verificado_Inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_orange_light"
                     android:elevation="0dp"
-                    android:text="Verificado"
+                    android:text="@string/Verificado"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold" />
-
+                <!--Botón Ingresa -->
                 <Button
-                    android:id="@+id/btn_Ingresa"
+                    android:id="@+id/btn_Ingresa_Inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_orange_dark"
-                    android:text="Ingresa"
+                    android:text="@string/Ingresa"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold" />
-
+                <!--Botón Registro -->
                 <Button
-                    android:id="@+id/btn_Registro"
+                    android:id="@+id/btn_Registro_Inicio"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_red_light"
-                    android:text="Registro"
+                    android:text="@string/Registro"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold" />
 
 
 
             </LinearLayout>
-
+            <!--Botón WEB -->
             <Button
-                android:id="@+id/btn_Web"
+                android:id="@+id/btn_Web_Inicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Web" />
