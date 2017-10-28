@@ -1,6 +1,7 @@
 package com.example.adrian.appe;
 
 import android.content.Intent;
+import android.content.pm.InstrumentationInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class FormularioGeneral extends AppCompatActivity {
+
+
 
     Button btnIngresa;
     Button btnVerificado;
@@ -127,7 +130,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-       
+
     }
 
     public void Femenino(View Checkbox){
@@ -139,6 +142,7 @@ public class FormularioGeneral extends AppCompatActivity {
         chkMasculino.setChecked(true);
         chkFemenino.setChecked(false);
     }
+
 
 }
 
