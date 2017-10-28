@@ -19,14 +19,6 @@ public class FormularioGeneral extends AppCompatActivity {
 
     Spinner spinUsuarios;
 
-    /*Button btnSweb;
-    Button btnSbrigadista;
-    Button btnStransporte;
-    Button btnSparamedico;
-    Button btnSdesastre;
-    Button btnSacopio;
-    Button btnSalbergue;*/
-
     CheckBox chkFemenino;
     CheckBox chkMasculino;
 
@@ -135,78 +127,7 @@ public class FormularioGeneral extends AppCompatActivity {
             }
         });
 
-        /*xlwUsuarios=(ExpandableListView)findViewById(R.id.xlw_Usuarios);
-        String[] Tipousuarios = {"Elige una opción...", "Recopilar información web", "Líder de brigadistas", "Líder de transporte",
-                "Líder de paramédicos", "Verificar información en zona de desastre", "Verificar información en albergue",
-                "Verificar información en centro de acopio"};
-        xlwUsuarios.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,Tipousuarios));*/
-
-
-        /*btnSweb=(Button)findViewById(R.id.btn_Sweb);
-        btnSweb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral.this,Sweb.class);
-                startActivity(intent);
-            }
-        });
-
-        btnSbrigadista=(Button)findViewById(R.id.btn_Sbrigada);
-        btnSbrigadista.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral.this,Sbrigadista.class);
-                startActivity(intent);
-            }
-        });
-
-        btnStransporte=(Button)findViewById(R.id.btn_STransporte);
-        btnStransporte.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral.this,Stransporte.class);
-                startActivity(intent);
-            }
-        });
-
-        btnSparamedico=(Button)findViewById(R.id.btn_SParamedico);
-        btnSparamedico.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral.this,Sparamedico.class);
-                startActivity(intent);
-            }
-        });
-
-        btnSdesastre=(Button)findViewById(R.id.btn_Szona);
-        btnSdesastre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral.this,Sdesastre.class);
-                startActivity(intent);
-            }
-        });
-
-        btnSacopio=(Button)findViewById(R.id.btn_Sacopio);
-        btnSacopio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral.this,Sacopio.class);
-                startActivity(intent);
-            }
-        });
-
-        btnSalbergue=(Button)findViewById(R.id.btn_Salbergue);
-        btnSalbergue.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral.this,Salbergue.class);
-                startActivity(intent);
-            }
-        });
-    }
-
-    */
+       
     }
 
     public void Femenino(View Checkbox){
