@@ -15,6 +15,8 @@ public class Dataformulariogeneral {
         this.apellidomaterno=apellidomaterno;
         this.apellidopaterno=apellidopaterno;
         this.nombre=nombre;
+
+
     }
 
     public ContentValues toContentValues(){

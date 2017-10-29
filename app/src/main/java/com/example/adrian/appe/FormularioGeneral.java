@@ -10,8 +10,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.adrian.appe.DataRegistro.Dataformulariogeneral;
 
 public class FormularioGeneral extends AppCompatActivity {
 
@@ -25,11 +28,16 @@ public class FormularioGeneral extends AppCompatActivity {
     CheckBox chkFemenino;
     CheckBox chkMasculino;
 
+    EditText txtMaterno;
+    EditText txtPaterno;
+    EditText txtNombre;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_general);
+
 
         chkFemenino = (CheckBox) findViewById(R.id.chk_Femenino);
         chkMasculino = (CheckBox) findViewById(R.id.chk_Masculino);
@@ -93,6 +101,7 @@ public class FormularioGeneral extends AppCompatActivity {
                     case 0:
                         break;
                     case 1:
+                        //GuardarDatosGenerales();
                         Intent intent1 = new Intent(FormularioGeneral.this, Sweb.class);
                         startActivity(intent1);
                         break;
@@ -131,6 +140,18 @@ public class FormularioGeneral extends AppCompatActivity {
         });
 
 
+    }
+
+    public void GuardarDatosGenerales(){
+        txtMaterno=(EditText) findViewById(R.id.txt_Amaterno);
+        txtPaterno=(EditText) findViewById(R.id.txt_Apaterno);
+        txtNombre=(EditText) findViewById(R.id.txt_Nombre);
+
+        String apellidomaterno=txtMaterno.getText().toString();
+        String apellidopaterno=txtPaterno.getText().toString();
+        String nombre=txtNombre.getText().toString();
+
+        Dataformulariogeneral usuario=new Dataformulariogeneral(apellidomaterno,apellidopaterno,nombre);
     }
 
     public void Femenino(View Checkbox){
