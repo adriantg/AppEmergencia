@@ -1,5 +1,7 @@
 package com.example.adrian.appe;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.InstrumentationInfo;
 import android.os.Bundle;
@@ -15,13 +17,14 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.adrian.appe.DataRegistro.Dataformulariogeneral;
+import com.example.adrian.appe.DataRegistro.DataformulariogeneralDbHelper;
 
 public class FormularioGeneral extends AppCompatActivity {
 
 
-
     Button btnIngresa;
     Button btnVerificado;
+    Dataformulariogeneral persona;
 
     Spinner spinUsuarios;
 
@@ -104,6 +107,10 @@ public class FormularioGeneral extends AppCompatActivity {
                         //GuardarDatosGenerales();
                         Intent intent1 = new Intent(FormularioGeneral.this, Sweb.class);
                         startActivity(intent1);
+                         persona = GuardarDatosGenerales();
+
+
+
                         break;
                     case 2:
                         Intent intent2 = new Intent(FormularioGeneral.this, Sbrigadista.class);
@@ -142,7 +149,7 @@ public class FormularioGeneral extends AppCompatActivity {
 
     }
 
-    public void GuardarDatosGenerales(){
+    public Dataformulariogeneral GuardarDatosGenerales(){
         txtMaterno=(EditText) findViewById(R.id.txt_Amaterno);
         txtPaterno=(EditText) findViewById(R.id.txt_Apaterno);
         txtNombre=(EditText) findViewById(R.id.txt_Nombre);
@@ -152,6 +159,7 @@ public class FormularioGeneral extends AppCompatActivity {
         String nombre=txtNombre.getText().toString();
 
         Dataformulariogeneral usuario=new Dataformulariogeneral(apellidomaterno,apellidopaterno,nombre);
+        return usuario;
     }
 
     public void Femenino(View Checkbox){
