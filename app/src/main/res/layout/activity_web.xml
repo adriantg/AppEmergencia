@@ -142,17 +142,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
 
+         <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:id="@+id/recycler_Web_Institucion1">
+            </android.support.v7.widget.RecyclerView>
 
+    <!-- A RecyclerView with some commonly used attributes -->
     <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/my_recycler_view"
         android:scrollbars="vertical"
-        android:id="@+id/recycler_Web_Institucion1">
-        </android.support.v7.widget.RecyclerView>
+        android:layout_width="match_parent"
+        android:layout_height="175dp"/>
 
 
 
 
 
-        </LinearLayout>
+</LinearLayout>
 

@@ -36,7 +36,7 @@
     <string name="Fotos_centro_acopio">Fotos del centro de acopio</string>
     <string name="Archivo_imagen">Aquí va un archivo de imagen</string>
     <string name="Pregunta_actividades_centro_acopio">¿Qué actividades realizas en el centro de acopio?</string>
-    <string name="Descripcion_actividades_centro_acopio">Agrega una breve descripción de las actividades que realizas</string>
+    <string name="Descripcion_actividades">Agrega una breve descripción de las actividades que realizas</string>
     <string name="Dias_disponibles">Días dispinibles</string>
     <string name="Lunes">Lunes</string>
     <string name="Martes">Martes</string>
@@ -53,6 +53,22 @@
     <string name="Dieciocho_a_veintidos">18:00-22:00</string>
     <string name="Veintidos_a_dos">22:00-02:00</string>
     <string name="Enviar_registro">ENVIAR REGISTRO</string>
+    <string name="Administrador_albergue">Administrador de albergue</string>
+    <string name="Descripcion_administrador_albergue">Este tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.</string>
+    <string name="Direccion_albergue">Dirección del albergue</string>
+    <string name="Descripcion_albergue">Descripción del albergue</string>
+    <string name="Capacidad_albergue">Capacidad</string>
+    <string name="Residentes_aceptan">Residentes que se aceptan</string>
+    <string name="Mixto">Mixto</string>
+    <string name="Hombres">Hombre</string>
+    <string name="Mujeres">Mujeres</string>
+    <string name="Niños">Niños</string>
+    <string name="Mascotas">Mascotas</string>
+    <string name="Fotos_albergues">Fotos del albergue</string>
+    <string name="Pregunta_actividades_albergue">¿Qué actividades realizas en el albergue?</string>
+
+
+
 
 
 

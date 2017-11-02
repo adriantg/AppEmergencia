@@ -11,6 +11,7 @@ public class Dataformulariogeneral {
     private String apellidomaterno;
     private String nombre;
 
+    //Constructor de la clase
     public Dataformulariogeneral(String apellidomaterno,String apellidopaterno, String nombre){
         this.apellidomaterno=apellidomaterno;
         this.apellidopaterno=apellidopaterno;
@@ -19,6 +20,7 @@ public class Dataformulariogeneral {
 
     }
 
+    //Método contenedor de los valores
     public ContentValues toContentValues(){
         //Contenedor de valores
         ContentValues values=new ContentValues();
