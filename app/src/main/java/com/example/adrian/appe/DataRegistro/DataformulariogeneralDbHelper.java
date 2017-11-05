@@ -19,10 +19,6 @@ public class DataformulariogeneralDbHelper extends SQLiteOpenHelper {
         saveDataformulariogeneral(persona);
     }
 
-
-
-
-
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase){
         //Comandos para SQLite
@@ -36,7 +32,7 @@ public class DataformulariogeneralDbHelper extends SQLiteOpenHelper {
 
     }
 
-//Agregar datos
+    //Agregar datos
         public long saveDataformulariogeneral(Dataformulariogeneral data){
             SQLiteDatabase sqLiteDatabase=getWritableDatabase();
 

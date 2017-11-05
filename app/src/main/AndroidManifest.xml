@@ -42,8 +42,12 @@
             android:windowSoftInputMode="stateHidden" />
         <activity
             android:name=".Ingresa"
-            android:windowSoftInputMode="stateHidden"></activity>
-        <activity android:name=".Web"></activity>
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Web" />
+        <activity android:name=".FormularioGeneral2"
+            android:windowSoftInputMode="stateHidden">
+
+        </activity>
     </application>
 
 </manifest>

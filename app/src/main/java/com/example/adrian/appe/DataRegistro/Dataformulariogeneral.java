@@ -7,7 +7,7 @@ import android.content.ContentValues;
  */
 
 public class Dataformulariogeneral {
-    private String apellidopaterno;
+    public String apellidopaterno;
     private String apellidomaterno;
     private String nombre;
 
@@ -17,6 +17,10 @@ public class Dataformulariogeneral {
         this.apellidopaterno=apellidopaterno;
         this.nombre=nombre;
 
+
+    }
+
+    public Dataformulariogeneral(){
 
     }
 
