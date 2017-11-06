@@ -60,7 +60,7 @@ public class FormularioGeneral extends AppCompatActivity {
     int Edad;
     String Ocupacion;
     String Nacionalidad;
-    int ID;
+    String ID;
     String FotoID; //Reemplazar posteriormente con insertar imagen
     String Calle;
     int NumExterior;
@@ -109,11 +109,12 @@ public class FormularioGeneral extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(FormularioGeneral.this, FormularioGeneral2.class);
-                intent.putExtra("ID",ID);
-                intent.putExtra("Actividad",Actividad);
-                startActivity(intent);
+                ID="prueba";//Momentaneo hasta activar AltaSQL
+                //AltaSQL();
+                Intent siguiente = new Intent(FormularioGeneral.this, FormularioGeneral2.class);
+                siguiente.putExtra("ID",ID);        //Pasa a la siguiente actividad el valor de ID para nueva tabla
+                siguiente.putExtra("Actividad",Actividad);  //Para saber que desplegar y que no.
+                startActivity(siguiente);
 
             }
         });
@@ -146,47 +147,46 @@ public class FormularioGeneral extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinUsuarios.setAdapter(dataAdapter);
 
-        spinUsuarios.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+       spinUsuarios.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case 0:
                         break;
                     case 1:
-                        Actividad="Información web";
-                        Intent intent1 = new Intent(FormularioGeneral.this, Sweb.class);
-                        //intent1.putExtra()
-                        startActivity(intent1);
+                        Actividad="Usuario Web";
+                        //Intent intent1 = new Intent(FormularioGeneral.this, Sweb.class);
+                        //startActivity(intent1);
                         break;
                     case 2:
                         Actividad="Líder brigadista";
-                        Intent intent2 = new Intent(FormularioGeneral.this, Sbrigadista.class);
-                        startActivity(intent2);
+                        //Intent intent2 = new Intent(FormularioGeneral.this, Sbrigadista.class);
+                        //startActivity(intent2);
                         break;
                     case 3:
                         Actividad="Líder transporte";
-                        Intent intent3 = new Intent(FormularioGeneral.this, Stransporte.class);
-                        startActivity(intent3);
+                        //Intent intent3 = new Intent(FormularioGeneral.this, Stransporte.class);
+                        //startActivity(intent3);
                         break;
                     case 4:
                         Actividad="Líder paramédicos";
-                        Intent intent4 = new Intent(FormularioGeneral.this, Sparamedico.class);
-                        startActivity(intent4);
+                        //Intent intent4 = new Intent(FormularioGeneral.this, Sparamedico.class);
+                        //startActivity(intent4);
                         break;
                     case 5:
                         Actividad="Información desastre";
-                        Intent intent5 = new Intent(FormularioGeneral.this, Sdesastre.class);
-                        startActivity(intent5);
+                        //Intent intent5 = new Intent(FormularioGeneral.this, Sdesastre.class);
+                        //startActivity(intent5);
                         break;
                     case 6:
                         Actividad="Información albergue";
-                        Intent intent6 = new Intent(FormularioGeneral.this, Salbergue.class);
-                        startActivity(intent6);
+                        //Intent intent6 = new Intent(FormularioGeneral.this, Salbergue.class);
+                        //startActivity(intent6);
                         break;
                     case 7:
                         Actividad="Información acopio";
-                        Intent intent7 = new Intent(FormularioGeneral.this, Sacopio.class);
-                        startActivity(intent7);
+                        //Intent intent7 = new Intent(FormularioGeneral.this, Sacopio.class);
+                        //startActivity(intent7);
                         break;
 
                 }
@@ -201,26 +201,14 @@ public class FormularioGeneral extends AppCompatActivity {
 
     }
 
-   /* private Dataformulariogeneral GuardarDatosGenerales(){
-        txtMaterno=(EditText) findViewById(R.id.txt_Amaterno);
-        txtPaterno=(EditText) findViewById(R.id.txt_Apaterno);
-        txtNombre=(EditText) findViewById(R.id.txt_Nombre);
 
-        String apellidomaterno=txtMaterno.getText().toString();
-        String apellidopaterno=txtPaterno.getText().toString();
-        String nombre=txtNombre.getText().toString();
-
-        usuario=new Dataformulariogeneral(apellidomaterno,apellidopaterno,nombre);
-        return usuario;
-    }*/
-
-    private void Femenino(View Checkbox){
+    public void Femenino(View Checkbox){
         chkMasculino.setChecked(false);
         chkFemenino.setChecked(true);
         Sexo="Femenino";
     }
 
-    private void Masculino(View Checkbox){
+    public void Masculino(View Checkbox){
         chkMasculino.setChecked(true);
         chkFemenino.setChecked(false);
         Sexo="Masculino";
@@ -269,7 +257,7 @@ public class FormularioGeneral extends AppCompatActivity {
          Edad=Integer.parseInt(txtEdad.getText().toString());
          Ocupacion=txtOcupacion.getText().toString();
          Nacionalidad=txtNacionalidad.getText().toString();
-         ID=Integer.parseInt(txtID.toString());
+         ID=txtID.toString();
          FotoID=txtFotoID.getText().toString(); //Reemplazar posteriormente con insertar imagen
          Calle=txtCalle.getText().toString();
          NumExterior=Integer.parseInt(txtNumExterior.toString());
@@ -294,7 +282,7 @@ public class FormularioGeneral extends AppCompatActivity {
 
         ContentValues registro = new ContentValues();
 
-        registro.put("CURP",ID);
+        registro.put("ID",ID);
         registro.put("APaterno",Paterno);
         registro.put("AMaterno",Materno);
         registro.put("Nombre",Nombre);

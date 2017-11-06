@@ -30,14 +30,14 @@
     <string name="Lugar2">Lugar 2</string>
     <string name="Lugar3">Lugar 3</string>
     <string name="Agregar_lugar">Agregar lugar (+)</string>
-    <string name="Agregar_lugar_submenu">Agregar lugar (este es un submenú)</string>
+    <string name="Agregar_lugar_submenu">Agregar lugar</string>
     <string name="Direccion_centro_acopio">Dirección del centro de acopio</string>
     <string name="Descripcion_centro_acopio">Descripción del centro de acopio</string>
     <string name="Fotos_centro_acopio">Fotos del centro de acopio</string>
     <string name="Archivo_imagen">Aquí va un archivo de imagen</string>
     <string name="Pregunta_actividades_centro_acopio">¿Qué actividades realizas en el centro de acopio?</string>
-    <string name="Descripcion_actividades">Agrega una breve descripción de las actividades que realizas</string>
-    <string name="Dias_disponibles">Días dispinibles</string>
+    <string name="Descripcion_actividades">Agrega una breve descripción de las actividades que realizas en el lugar</string>
+    <string name="Dias_disponibles">Días disponibles</string>
     <string name="Lunes">Lunes</string>
     <string name="Martes">Martes</string>
     <string name="Miercoles">Miércoles</string>
@@ -45,7 +45,7 @@
     <string name="Viernes">Viernes</string>
     <string name="Sabado">Sábado</string>
     <string name="Domingo">Domingo</string>
-    <string name="Horario">Horario deseado</string>
+    <string name="Horario">Horarios disponibles</string>
     <string name="Dos_a_seis">02:00-06:00</string>
     <string name="Seis_a_diez">06:00-10:00</string>
     <string name="Diez_a_catorce">10:00-14:00</string>

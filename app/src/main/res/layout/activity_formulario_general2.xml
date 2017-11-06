@@ -35,7 +35,7 @@
                     android:textSize="24sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
-                    android:layout_weight="5"/>
+                    android:layout_weight="7"/>
                 <!--Botón Regresar -->
                 <Button
                     android:id="@+id/btn_Regresar"
@@ -60,7 +60,493 @@
                 android:textSize="18sp"
                 android:textStyle="italic" />
 
-            <!--SECCIÓN  LUGAR/ACTIVIDADES -->
+            <!--Sección Web Solo Web-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/Seccion_Web">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Qué redes sociales manejas?"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Facebook"
+                    android:id="@+id/chk_Facebook"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Twitter"
+                    android:id="@+id/chk_Twitter"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Instagram"
+                    android:id="@+id/chk_Instagram"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Snapchat"
+                    android:id="@+id/chk_Snapchat"
+                    android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Qué institución te gustaría cubrir?"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Protección Civil"
+                    android:id="@+id/chk_Proteccion"
+                    android:onClick="Proteccion"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Sismológico Nacional"
+                    android:id="@+id/chk_Sismologico"
+                    android:onClick="Sismologico"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Meteorológico Nacional"
+                    android:id="@+id/chk_Meteorologico"
+                    android:onClick="Meteorologico"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Cruz Roja"
+                    android:id="@+id/chk_Cruzroja"
+                    android:onClick="Cruzroja"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Gobierno Local"
+                    android:id="@+id/chk_Gobiernolocal"
+                    android:onClick="Glocal"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Gobierno Federal"
+                    android:id="@+id/chk_Gobiernofederal"
+                    android:onClick="Gfederal"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Policía Federal"
+                    android:id="@+id/chk_Policiafederal"
+                    android:onClick="Pfederal"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Bomberos"
+                    android:id="@+id/chk_Bomberos"
+                    android:onClick="Bomberos"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      SEDENA"
+                    android:id="@+id/chk_SEDENA"
+                    android:onClick="Sedena"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      SEP"
+                    android:id="@+id/chk_SEP"
+                    android:onClick="Sep"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      UNAM"
+                    android:id="@+id/chk_UNAM"
+                    android:onClick="Unam"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      IPN"
+                    android:id="@+id/chk_IPN"
+                    android:onClick="Ipn"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      UAM"
+                    android:id="@+id/chk_UAM"
+                    android:onClick="Uam"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <!-- Sección    LIDER Solo Transporte,Paramedico, Brigadista -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/Seccion_Lider">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Con qué experiencia de este tipo cuentas?"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/chk_Experiencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!--Sección Certificados Solo Paramedico, Brigadista-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/Seccion_Certificados">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¿Qué certificados tienes?"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agrega una breve descripción y archivo visual del documento."
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_Certificado"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/txt_FotoCertificado"/>
+                </LinearLayout>
+
+                <!--Sección Transportes Solo Transporte-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/Seccion_Transportes">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Con cuántos elementos de transporte cuenta tu brigada?"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Automóvil:"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/txt_Auto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Motocicleta:"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/txt_Moto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bicicleta:"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/txt_Bici"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Camión:"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/txt_Camion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Camioneta:"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/txt_Camioneta"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Van:"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+
+                        <EditText
+                            android:id="@+id/txt_Van"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Seccion Actividades Brigada Solo Brigadista-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/Seccion_ActividadesBrigada">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Qué actividades realiza tu brigada ?"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Recoger escombros"
+                        android:id="@+id/chk_Recoger_escombros"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Acordonar el área"
+                        android:id="@+id/chk_Acordonar_area"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Revisión de estructuras"
+                        android:id="@+id/chk_Revision_estructuras"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Red eléctrica"
+                        android:id="@+id/chk_Red_electrica"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Carpintería"
+                        android:id="@+id/chk_Carpinteria"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Manejo de sustancias químicas peligrosas"
+                        android:id="@+id/chk_Sustancias_quimicas"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Construcción"
+                        android:id="@+id/chk_Construccion"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Primeros auxilios"
+                        android:id="@+id/chk_Primeros_auxilios"
+                        android:textColor="@android:color/black" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Otros(+)"
+                        android:id="@+id/txt_Otrobrigadista"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre de los miembros que dispones"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favor de ingresar nombre por nombre."
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/txt_NombreMiembro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"/>
+                    <Button
+                        android:id="@+id/btn_IngresarMiembro"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Ingresar"
+                        android:layout_weight="3"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favor de anexar imagenes que prueben tu actividad"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_FotoActividadesLider"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Zonas en las que puedes trabajar"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/chk_Zona1Lider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Zona1"
+                    android:textColor="@android:color/black" />
+
+                <CheckBox
+                    android:id="@+id/chk_Zona2Lider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Zona2"
+                    android:textColor="@android:color/black" />
+                <CheckBox
+                    android:id="@+id/chk_Zona3Lider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="      Zona3"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+            <!--SECCIÓN  LUGAR/ACTIVIDADES  Solo CAcopio,Albergue, ZDesastre -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,21 +562,21 @@
                 android:textColor="@android:color/black"/>
             <!--Checkbox Zona 1 -->
             <CheckBox
-                android:id="@+id/chk_Zona1_Sacopio"
+                android:id="@+id/chk_Zona1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Zona1"
                 android:textColor="@android:color/black" />
             <!--Checkbox Zona 2 -->
             <CheckBox
-                android:id="@+id/chk_Zona2_Sacopio"
+                android:id="@+id/chk_Zona2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Zona2"
                 android:textColor="@android:color/black" />
             <!--Checkbox Zona 3 -->
             <CheckBox
-                android:id="@+id/chk_Zona3_Sacopio"
+                android:id="@+id/chk_Zona3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Zona3"
@@ -107,33 +593,41 @@
                 android:textColor="@android:color/black"/>
             <!--Checkbox LUGAR 1 -->
             <CheckBox
-                android:id="@+id/chk_Lugar1_Sacopio"
+                android:id="@+id/chk_Lugar1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lugar1"
                 android:textColor="@android:color/black" />
             <!--Checkbox LUGAR 2 -->
             <CheckBox
-                android:id="@+id/chk_Lugar2_Sacopio"
+                android:id="@+id/chk_Lugar2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lugar2"
                 android:textColor="@android:color/black" />
             <!--Checkbox LUGAR 3 -->
             <CheckBox
-                android:id="@+id/chk_Lugar3_Sacopio"
+                android:id="@+id/chk_Lugar3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lugar3"
                 android:textColor="@android:color/black" />
             <!--Opción Agregar lugar(+) -->
-            <EditText
-                android:id="@+id/txt_Agregar_Lugar_Sacopio"
+            <CheckBox
+                android:id="@+id/chk_Agregar_Lugar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/Agregar_lugar"/>
 
-            <!--SECCIÓN AGREGAR LUGAR (ESTE ES UN SUBMENÚ) -->
+            <!--SECCIÓN AGREGAR LUGAR (SUBMENÚ)  Solo si seleccionó Agregar Lugar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/Seccion_AgregarLugar">
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -142,39 +636,105 @@
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-            <!--Dirección centro de acopio -->
+            <!--Dirección del lugar -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Direccion_centro_acopio"
+                android:text="Dirección del lugar"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
-            <!--Agregar dirección centro de acopio -->
+            <!--Agregar dirección  -->
             <EditText
-                android:id="@+id/txt_Direccion_cento_acopio_Sacopio"
+                android:id="@+id/txt_DireccionNuevoLugar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <!--Descripción centro de acopio -->
+            <!--Descripción del lugar -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Descripcion_centro_acopio"
+                android:text="Descripción del lugar"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
-            <!--Agregar Descripción centro de acopio -->
+            <!--Agregar Descripción  -->
             <EditText
-                android:id="@+id/chk_Descripcion_Centro_Acopio_Sacopio"
+                android:id="@+id/chk_DescripcionNuevoLugar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-            <!--Fotos del centro de acopio -->
+                    <!-- Seccion Capacidad/Residentes Solo Albergue-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:id="@+id/Seccion_AgregarAlbergue">
+
+                        <!--Capacidad-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Capacidad_albergue"
+                            android:textAllCaps="false"
+                            android:textSize="16sp"
+                            android:textStyle="normal" />
+                        <EditText
+                            android:id="@+id/chk_CapacidadAlbergue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <!--Tipo de residentes que se aceptan-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Residentes_aceptan"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"/>
+                        <!--Mixto-->
+                        <CheckBox
+                            android:id="@+id/chk_ResidentesMixtoAlbergue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Mixto"
+                            android:textColor="@android:color/black" />
+                        <!--Hombre-->
+                        <CheckBox
+                            android:id="@+id/chk_ResidentesHombresAlbergue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Hombres"
+                            android:textColor="@android:color/black" />
+                        <!--Mujeres-->
+                        <CheckBox
+                            android:id="@+id/chk_ResidentesMujeresAlbergue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Mujeres"
+                            android:textColor="@android:color/black" />
+                        <!--Niños-->
+                        <CheckBox
+                            android:id="@+id/chk_ResidentesNinosAlbergue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Niños"
+                            android:textColor="@android:color/black" />
+                        <!--Mascotas-->
+                        <CheckBox
+                            android:id="@+id/chk_ResidentesMascotasAlbergue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Mascotas"
+                            android:textColor="@android:color/black" />
+
+                    </LinearLayout>
+
+            <!--Fotos del lugar -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Fotos_centro_acopio"
+                android:text="Fotos del lugar"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
@@ -182,13 +742,17 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Archivo_imagen"/>
+                android:id="@+id/txt_FotosNuevoLugar"/>
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp" />
+                </LinearLayout>
 
-            <!--SECCIÓN ¿QUÉ ACTIVIDADES REALIZAS EN EL CNETRO DE ACOPIO? -->
+            <!--SECCIÓN ¿QUÉ ACTIVIDADES REALIZAS EN EL LUGAR? -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Pregunta_actividades_centro_acopio"
+                android:text="¿Qué actividades realizas?"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -203,17 +767,91 @@
                 android:textStyle="normal"/>
             <!--Agregar descripción actividades realizadas -->
             <EditText
-                android:id="@+id/txt_actividades_Sacopio"
+                android:id="@+id/txt_DescripcionActividadesRealizadas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <!--Agregar una foto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Por favor, agrega una foto relacionada a las actividades que realizas"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="normal"/>
             <!--Agregar archivo de imagen -->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/Archivo_imagen"/>
+                android:text=""
+                android:id="@+id/txt_FotoActividades"/>
+
+                <!-- Sección equipo disponible Solo Zdesastre-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/Seccion_EquipoDisponible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Con qué equipo cuentas?"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"/>
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Botas con casquillo"
+                        android:id="@+id/chk_Botas"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Chaleco"
+                        android:id="@+id/chk_Chaleco"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Casco"
+                        android:id="@+id/chk_Casco"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Guantes de carnaza"
+                        android:id="@+id/chk_Guantes"
+                        android:textColor="@android:color/black" />
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Cubrebocas"
+                        android:id="@+id/chk_Cubrebocas"
+                        android:textColor="@android:color/black" />
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="      Lentes de protección"
+                        android:id="@+id/chk_Lentes"
+                        android:textColor="@android:color/black" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Otros(+)"
+                        android:id="@+id/txt_OtroEquipo"/>
+
+                </LinearLayout>
+
             </LinearLayout>
 
-            <!--SECCIÓN DIAS DISPONIBLES -->
+            <!--SECCIÓN  DISPONIBILIDAD Todos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -224,49 +862,49 @@
                 android:textStyle="bold" />
             <!--Lunes -->
             <CheckBox
-                android:id="@+id/chk_Lunes_Sacopio"
+                android:id="@+id/chk_Lunes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lunes"
                 android:textColor="@android:color/black" />
             <!--Martes -->
             <CheckBox
-                android:id="@+id/chk_Martes_Sacopio"
+                android:id="@+id/chk_Martes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Martes"
                 android:textColor="@android:color/black" />
             <!--Miércoles -->
             <CheckBox
-                android:id="@+id/chk_Miercoles_Sacopio"
+                android:id="@+id/chk_Miercoles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Miercoles"
                 android:textColor="@android:color/black" />
-            <!--LJueves-->
+            <!--Jueves-->
             <CheckBox
-                android:id="@+id/chk_Jueves_Sacopio"
+                android:id="@+id/chk_Jueves"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Jueves"
                 android:textColor="@android:color/black" />
             <!--Viernes -->
             <CheckBox
-                android:id="@+id/chk_Viernes_Sacopio"
+                android:id="@+id/chk_Viernes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Viernes"
                 android:textColor="@android:color/black" />
             <!--Sábado -->
             <CheckBox
-                android:id="@+id/chk_Sabado_Sacopio"
+                android:id="@+id/chk_Sabado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Sabado"
                 android:textColor="@android:color/black" />
             <!--Domingo -->
             <CheckBox
-                android:id="@+id/chk_Domingo_Sacopio"
+                android:id="@+id/chk_Domingo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Domingo"
@@ -283,55 +921,65 @@
                 android:textStyle="bold" />
             <!--02:00-06:00-->
             <CheckBox
-                android:id="@+id/chk_0206_Sacopio"
+                android:id="@+id/chk_0206"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Dos_a_seis"
                 android:textColor="@android:color/black" />
             <!--06:00-10:00-->
             <CheckBox
-                android:id="@+id/chk_0610_Sacopio"
+                android:id="@+id/chk_0610"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Seis_a_diez"
                 android:textColor="@android:color/black" />
             <!--10:00-14:00-->
             <CheckBox
-                android:id="@+id/chk_1014_Sacopio"
+                android:id="@+id/chk_1014"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Diez_a_catorce"
                 android:textColor="@android:color/black" />
             <!--14:00-18:00-->
             <CheckBox
-                android:id="@+id/chk_1418_Sacopio"
+                android:id="@+id/chk_1418"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Catorce_a_dieciocho"
                 android:textColor="@android:color/black" />
             <!--18:00-22:00-->
             <CheckBox
-                android:id="@+id/chk_1822_Sacopio"
+                android:id="@+id/chk_1822"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Dieciocho_a_veintidos"
                 android:textColor="@android:color/black" />
             <!--22:00-02:00-->
             <CheckBox
-                android:id="@+id/chk_2202_Sacopio"
+                android:id="@+id/chk_2202"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Veintidos_a_dos"
                 android:textColor="@android:color/black" />
+            </LinearLayout>
 
             <!--BOTÓN ENVIAR REGISTRO-->
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
+
             <Button
-                android:id="@+id/btn_Enviar_Registro_Sacopio"
+                android:id="@+id/btn_Enviar_Registro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/holo_blue_dark"
                 android:text="@string/Enviar_registro"
                 android:textStyle="bold" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
         </LinearLayout>
 

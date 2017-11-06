@@ -25,7 +25,7 @@ public class Sweb extends AppCompatActivity {
     CheckBox chkUnam;
     CheckBox chkIpn;
     CheckBox chkUam;
-    FormularioGeneral hello;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

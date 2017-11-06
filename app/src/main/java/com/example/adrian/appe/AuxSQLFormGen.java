@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class AuxSQLFormGen extends SQLiteOpenHelper{
 
-        String sqlTabla = "CREATE TABLE FormGen1(CURP INTEGER PRIMARY KEY, APaterno TEXT, AMaterno TEXT, Nombre TEXT, Edad INTEGER, " +
+        String sqlTabla = "CREATE TABLE FormGen1(ID TEXT PRIMARY KEY, APaterno TEXT, AMaterno TEXT, Nombre TEXT, Edad INTEGER, " +
                 "Ocupacion TEXT, Sexo TEXT, Nacionalidad TEXT, Identificacion TEXT, Calle TEXT, NumExterior INTEGER, NumInterior INTEGER," +
                 "Colonia TEXT, CP INTEGER, Delegacion TEXT, Estado TEXT, Domicilio TEXT, Telefono INTEGER, Celular INTEGER, Correo TEXT" +
                 "RefNombre TEXT, RefTelefono INTEGER, RefCorreo TEXT, Actividad TEXT)";  //Identificacion y Domicilio posteriormente se cambian por BLOB
