@@ -36,6 +36,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
     LinearLayout lytSeccionAgregarAlbergue;
     LinearLayout lytSeccionEquipoDisponible;
 
+    //Seccción TEXVIEW
     TextView txtTitulo;
     TextView txtDescripcion;
 
@@ -100,6 +101,26 @@ public class FormularioGeneral2 extends AppCompatActivity {
     CheckBox chk1822;
     CheckBox chk2202;
 
+    //Seccción EDITTEXT
+    EditText txtExperiencia;  //VERIFICAR ID CON CHK
+    EditText txtCertificados;
+    EditText txtFotoCertificado; //Cambiar por un archivo de imagen
+    EditText txtAutomovil;
+    EditText txtMotocicleta;
+    EditText txtBicicleta;
+    EditText txtCamion;
+    EditText txtCamioneta;
+    EditText txtVan;
+    EditText txtOtros;
+    EditText txtNombreMiembro;
+    EditText txtFotoActividad; //Cambiar por un archivo de imagen
+    EditText txtDireccionNuevoLugar;
+    EditText txtDescripcionNuevoLugar;
+    EditText txtCapacidadAlbergue; //VERIFICAR ID CON CHK
+    
+
+
+
 
 
 
@@ -162,6 +183,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
         lytSeccionAgregarAlbergue=(LinearLayout)findViewById(R.id.Seccion_AgregarAlbergue);
         lytSeccionEquipoDisponible=(LinearLayout)findViewById(R.id.Seccion_EquipoDisponible);
 
+        //Sección de Texview
         txtTitulo=(TextView)findViewById(R.id.txt_TituloActividad);
         txtDescripcion=(TextView)findViewById(R.id.txt_DescripcionActividad);
 
