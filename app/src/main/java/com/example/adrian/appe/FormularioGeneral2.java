@@ -21,6 +21,8 @@ public class FormularioGeneral2 extends AppCompatActivity {
     String Actividad;
 
     Button btnRegresar;
+    Button btnEnviarRegistro;
+
     LinearLayout lytSeccionWeb;
     LinearLayout lytSeccionLider;
     LinearLayout lytSeccionCertificados;
@@ -75,9 +77,16 @@ public class FormularioGeneral2 extends AppCompatActivity {
             }
         });
 
-        //lytSeccionLugarActividades.removeAllViewsInLayout(); //Elimina el contenido de los layouts no deseados
-        //lytSeccionAgregarLugar.removeAllViewsInLayout();
-        //Si lo ponemos dentro de un if con condición la actividad seleccionada en el spiner podríamos usar solo una vista.
+
+        btnEnviarRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(FormularioGeneral2.this,Inicio.class);
+                Toast.makeText(FormularioGeneral2.this,"Datos guardados",Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
+
 
 
     }
@@ -85,6 +94,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
     private void Instanciar() {
 
         btnRegresar = (Button) findViewById(R.id.btn_Regresar);
+        btnEnviarRegistro=(Button)findViewById(R.id.btn_Enviar_Registro);
 
 
         lytSeccionWeb=(LinearLayout)findViewById(R.id.Seccion_Web);

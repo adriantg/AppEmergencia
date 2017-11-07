@@ -63,6 +63,16 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Web" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Contenido"
+                android:text="Aquí se colocará el menú para dirigirse a las distintas fuentes de información."
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="italic" />
+
 
         </LinearLayout>
 
