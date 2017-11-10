@@ -113,10 +113,36 @@ public class FormularioGeneral2 extends AppCompatActivity {
     EditText txtVan;
     EditText txtOtros;
     EditText txtNombreMiembro;
-    EditText txtFotoActividad; //Cambiar por un archivo de imagen
+    EditText txtFotoActividadesLider; //Cambiar por un archivo de imagen
     EditText txtDireccionNuevoLugar;
     EditText txtDescripcionNuevoLugar;
     EditText txtCapacidadAlbergue; //VERIFICAR ID CON CHK
+    EditText txtFotosNuevoLugar; //Cambiar por un archivo de imagen
+    EditText txtDescripcionActividadesRealizadas;
+    EditText txtFotoActividades; //Cambiar por un archivo de imagen
+    EditText txtOtroEquipo;
+
+    //Variables para guardar la información
+    String Experiencia;  //VERIFICAR ID CON CHK
+    String Certificados;
+    String FotoCertificado; //Cambiar por un archivo de imagen
+    String Automovil;
+    String Motocicleta;
+    String Bicicleta;
+    String Camion;
+    String Camioneta;
+    String Van;
+    String Otros;
+    String NombreMiembro;
+    String FotoActividadesLider; //Cambiar por un archivo de imagen
+    String DireccionNuevoLugar;
+    String DescripcionNuevoLugar;
+    String CapacidadAlbergue; //VERIFICAR ID CON CHK
+    String FotosNuevoLugar; //Cambiar por un archivo de imagen
+    String DescripcionActividadesRealizadas;
+    String FotoActividades; //Cambiar por un archivo de imagen
+    String OtroEquipo;
+
     
 
 
@@ -248,6 +274,26 @@ public class FormularioGeneral2 extends AppCompatActivity {
         chk1822=(CheckBox)findViewById(R.id.chk_1822);
         chk2202=(CheckBox)findViewById(R.id.chk_2202);
 
+        // COMPLETADO Sección de editText
+        txtExperiencia=(EditText) findViewById(R.id.txt_Experiencia);
+        txtCertificados=(EditText) findViewById(R.id.txt_Certificado);
+        txtFotoCertificado=(EditText) findViewById(R.id.txt_FotoCertificado);//Cambiar por un archivo de imagen
+        txtAutomovil=(EditText) findViewById(R.id.txt_Auto);
+        txtMotocicleta=(EditText) findViewById(R.id.txt_Moto);
+        txtBicicleta=(EditText) findViewById(R.id.txt_Bici);
+        txtCamion=(EditText) findViewById(R.id.txt_Camion);
+        txtCamioneta=(EditText) findViewById(R.id.txt_Camioneta);
+        txtVan=(EditText) findViewById(R.id.txt_Van);
+        txtOtros=(EditText) findViewById(R.id.txt_Otrobrigadista);
+        txtNombreMiembro=(EditText) findViewById(R.id.txt_NombreMiembro);
+        txtFotoActividadesLider=(EditText) findViewById(R.id.txt_FotoActividadesLider);//Cambiar por un archivo de imagen
+        txtDireccionNuevoLugar=(EditText) findViewById(R.id.txt_DireccionNuevoLugar);
+        txtDescripcionNuevoLugar=(EditText) findViewById(R.id.txt_DescripcionNuevoLugar);
+        txtCapacidadAlbergue=(EditText) findViewById(R.id.txt_CapacidadAlbergue);
+        txtFotosNuevoLugar=(EditText) findViewById(R.id.txt_FotosNuevoLugar);//Cambiar por un archivo de imagen
+        txtDescripcionActividadesRealizadas=(EditText) findViewById(R.id.txt_DescripcionActividadesRealizadas);
+        txtFotoActividades=(EditText) findViewById(R.id.txt_FotoActividades);
+        txtOtroEquipo=(EditText) findViewById(R.id.txt_OtroEquipo);
 
 
     }
@@ -317,7 +363,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
             startActivity(regresar);
         }
     }
-//¿QUÉ INSTIRUCIÓN TE GUSTARÍA CUBRIR?
+//¿QUÉ INSTITUCIÓN TE GUSTARÍA CUBRIR?
     private void Unchecked(){
         chkProteccion.setChecked(false);
         chkSismologico.setChecked(false);
@@ -399,6 +445,29 @@ public class FormularioGeneral2 extends AppCompatActivity {
     public void Uam(View CheckBox){
         Unchecked();
         chkUam.toggle();
+    }
+
+    //EXTRAER INFORMACIÓN
+    private void ExtraerData(){
+        Experiencia=txtExperiencia.getText().toString();
+        Certificados=txtCertificados.getText().toString();
+        FotoCertificado=txtFotoCertificado.getText().toString();
+        Automovil=txtAutomovil.getText().toString();
+        Motocicleta=txtMotocicleta.getText().toString();
+        Bicicleta=txtBicicleta.getText().toString();
+        Camion=txtCamion.getText().toString();
+        Camioneta=txtCamioneta.getText().toString();
+        Van=txtVan.getText().toString();
+        Otros=txtOtros.getText().toString();
+        NombreMiembro=txtNombreMiembro.getText().toString();
+        FotoActividadesLider=txtFotoActividadesLider.getText().toString();
+        DireccionNuevoLugar=txtDireccionNuevoLugar.getText().toString();
+        DescripcionNuevoLugar=txtDescripcionNuevoLugar.getText().toString();
+        CapacidadAlbergue=txtCapacidadAlbergue.getText().toString();
+        FotosNuevoLugar=txtFotosNuevoLugar.getText().toString();
+        DescripcionActividadesRealizadas=txtDescripcionActividadesRealizadas.getText().toString();
+        FotoActividades=txtFotoActividades.getText().toString();
+        OtroEquipo=txtOtroEquipo.getText().toString();
     }
 
 }
