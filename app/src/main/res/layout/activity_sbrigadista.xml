@@ -24,10 +24,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+                <!--Título-->
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Líder de brigadistas"
+                    android:text="@string/Lider_Brigadistas"
                     android:textAllCaps="false"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -45,16 +46,16 @@
                     android:textStyle="bold" />
 
             </LinearLayout>
-
+            <!--Descripción actividades-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nEste tipo de usuario tiene organizado un grupo de voluntarios con conocimientos adecuados capaces de ejercer como brigadistas. Tiene la información de otros voluntarios y es capaz de organizarlos para ayudar donde se necesite. Es capaz de compartir sus conocimientos a otras personas, por lo que puede organizar grupos de capacitación para sumarse a su equipo de trabajo. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar.\n"
                 android:textAlignment="center"
+                android:text="@string/Descripción_Lider_Brigadistas"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="italic"/>
-
+            <!--Pregunta experiencia-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/txt_Experienciabrigada"/>
-
+            <!--Pregunta certificadis-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -76,6 +77,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
+            <!--Breve descripción de certificados-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -84,10 +86,12 @@
                 android:textSize="16sp"
                 android:textStyle="normal"
                 />
+            <!--CERTIFICADO-->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_certificadoBrigadistas"/>
+            <!--Archivo de imagen-->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,6 +105,7 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
+            <!--Check Box para actividades de la brigada-->
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,12 +154,13 @@
                 android:text="      Primeros auxilios"
                 android:id="@+id/chk_Primeros_auxilios"
                 android:textColor="@android:color/black" />
+            <!--Otros-->
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="Otros(+)"
                 android:id="@+id/txt_Otrobrigadista"/>
-
+            <!--SECCIÓN MIEMBROS QUE DISPONES-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -163,6 +169,7 @@
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+            <!--INGRESAR NOMBRE BRIGADISTAS-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -170,6 +177,8 @@
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -179,13 +188,14 @@
                     android:id="@+id/txt_NombreBrigadista"
                     android:layout_width="270sp"
                     android:layout_height="wrap_content" />
+                <!--BOTÓN PARA INGRESAR-->
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ingresar"
                     android:id="@+id/btn_Ingresarbrigadista"/>
             </LinearLayout>
-
+            <!--ZONAS PARA TRABAJAR-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -194,26 +204,29 @@
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
+            <!--Zona1-->
             <CheckBox
                 android:id="@+id/chk_Zona1brigadista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Zona1"
                 android:textColor="@android:color/black" />
-
+            <!--Zona2-->
             <CheckBox
                 android:id="@+id/chk_Zona2brigadista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Zona2"
                 android:textColor="@android:color/black" />
+            <!--Zona3-->
             <CheckBox
                 android:id="@+id/chk_Zona3brigadista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="      Zona3"
                 android:textColor="@android:color/black" />
+
+            <!--FALTA TERMINAR A PARTIR DE ESTE PUNTO-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

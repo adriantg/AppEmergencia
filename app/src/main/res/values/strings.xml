@@ -14,7 +14,7 @@
     <string name="Liga">Liga:</string>
     <string name="Web">Web</string>
     <string name="Verificado">VERIFICADO</string>
-    <string name="Ingresa">INGRESA</string>
+    <string name="Ingresa">INGRESAR</string>
     <string name="Registro">REGISTRO</string>
     <string name="Iniciar_sesion">Iniciar sesión</string>
     <string name="Usuario">Usuario: </string>
@@ -67,6 +67,24 @@
     <string name="Fotos_albergues">Fotos del albergue</string>
     <string name="Pregunta_actividades_albergue">¿Qué actividades realizas en el albergue?</string>
     <string name="Siguiente">Siguiente</string>
+    <string name="Lider_Brigadistas">Líder de brigadistas</string>
+    <string name="Descripción_Lider_Brigadistas">\nEste tipo de usuario tiene organizado un grupo de voluntarios con conocimientos adecuados capaces de ejercer como brigadistas. Tiene la información de otros voluntarios y es capaz de organizarlos para ayudar donde se necesite. Es capaz de compartir sus conocimientos a otras personas, por lo que puede organizar grupos de capacitación para sumarse a su equipo de trabajo. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar.\n</string>
+    <string name="Pregunta_Experiencia_Brigadistas">¿Con qué experiencia de este tipo cuentas?</string>
+    <string name="Certificados_Brigadistas">¿Qué certificados tienes?</string>
+    <string name="Pregunta_Actividades_Brigadadistas">¿Qué actividades realiza tu brigada?</string>
+    <string name="Recoger_Escombros_Brigadistas">Recoger escombros</string>
+    <string name="Acordonar_Brigadistas">Acordonar el área</string>
+    <string name="Revision_Estructuras_Brigadistas">Revisión de Estructuras</string>
+    <string name="Revision_Red_Electrica_Brigadistas">Revisión de la Red eléctrica</string>
+    <string name="Carpinteria_Brigadistas">Carpintería</string>
+    <string name="Sustancias_Quimicas_Brigadistas">Manejo de sustancias químicas peligrosas</string>
+    <string name="Construcción_Brigadistas">Construcción</string>
+    <string name="Primeros_Auxilios_Brigadistas">Primeros auxilios</string>
+    <string name="Otros_Brigadistas">Otros(+)</string>
+    <string name="Nombre_Miembros_Brigadistas">Nombre de los miembros que dispone</string>
+    <string name="Ingresar_Nombre_Brigadistas">Favor de ingresar nombre por nombre</string>
+    <string name="Zonas_Trabajar_Brigadistas">Zonas en las que puedes trabajar</string>
+    <string name="Anexar_Imagen_Brigadistas">Favor de anexar imagenes que prueben tu actividad</string>
 
 
 </resources>

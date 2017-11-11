@@ -51,17 +51,16 @@ public class FormularioGeneral extends AppCompatActivity {
     EditText txtRefTelefono;
     EditText txtRefCorreo;
 
-    String Sexo;
-    String Actividad;
-
-    String Materno;
     String Paterno;
+    String Materno;
     String Nombre;
     int Edad;
     String Ocupacion;
+    String Sexo;
     String Nacionalidad;
     String ID;
     String FotoID; //Reemplazar posteriormente con insertar imagen
+    String Actividad;
     String Calle;
     int NumExterior;
     int NumInterior;
@@ -76,7 +75,6 @@ public class FormularioGeneral extends AppCompatActivity {
     String RefNombre;
     int RefTelefono;
     String RefCorreo;
-
 
 
     @Override

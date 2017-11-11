@@ -218,9 +218,9 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/chk_Experiencia"
+                    android:id="@+id/txt_Experiencia"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
                 <!--Sección Certificados Solo Paramedico, Brigadista-->
                 <LinearLayout
@@ -659,10 +659,10 @@
                 android:textSize="16sp"
                 android:textStyle="normal" />
             <!--Agregar Descripción  -->
-            <EditText
-                android:id="@+id/chk_DescripcionNuevoLugar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/txt_DescripcionNuevoLugar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
 
                     <!-- Seccion Capacidad/Residentes Solo Albergue-->
                     <LinearLayout
@@ -679,10 +679,11 @@
                             android:textAllCaps="false"
                             android:textSize="16sp"
                             android:textStyle="normal" />
+
                         <EditText
-                            android:id="@+id/chk_CapacidadAlbergue"
+                            android:id="@+id/txt_CapacidadAlbergue"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"/>
                         <!--Tipo de residentes que se aceptan-->
                         <TextView
                             android:layout_width="wrap_content"
