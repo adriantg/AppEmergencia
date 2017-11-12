@@ -58,6 +58,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
     CheckBox chkUnam;
     CheckBox chkIpn;
     CheckBox chkUam;
+
     CheckBox chkEscombros;
     CheckBox chkAcordonar;
     CheckBox chkRevisionEstructuras;
@@ -69,6 +70,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
     CheckBox chkZona1Lider; //modificar por menús desplegables
     CheckBox chkZona2Lider;//modificar por menús desplegables
     CheckBox chkZona3Lider;//modificar por menús desplegables
+
     CheckBox chkZona1;//modificar por menús desplegables
     CheckBox chkZona2;//modificar por menús desplegables
     CheckBox chkZona3;//modificar por menús desplegables
@@ -76,7 +78,6 @@ public class FormularioGeneral2 extends AppCompatActivity {
     CheckBox chkLugar2;//modificar por menús desplegables
     CheckBox chkLugar3;//modificar por menús desplegables
     CheckBox chkAgregarLugar; //modificar por submenú
-    CheckBox chkMixto;
     CheckBox chkHombre;
     CheckBox chkMujer;
     CheckBox chkNinos;
@@ -87,6 +88,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
     CheckBox chkGuantes;
     CheckBox chkCubrebocas;
     CheckBox chkLentes;
+
     CheckBox chkLunes;
     CheckBox chkMartes;
     CheckBox chkMiercoles;
@@ -123,6 +125,46 @@ public class FormularioGeneral2 extends AppCompatActivity {
     EditText txtOtroEquipo;
 
     //Variables para guardar la información
+    String Institucion;
+
+    String Escombros="No";
+    String Acordonar="No";
+    String RevisionEstructuras="No";
+    String RedElectrica="No";
+    String Carpinteria="No";
+    String SustanciasQuimicas="No";
+    String Construccion="No";
+    String PrimerosAuxilios="No";
+
+    String ZonaLider;
+
+    String Zona;
+    String Lugar;
+    String Mujer="No";
+    String Hombre="No";
+    String Ninos="No";
+    String Mascotas="No";
+    String Botas="No";
+    String Chaleco="No";
+    String Casco="No";
+    String Guantes="No";
+    String Cubrebocas="No";
+    String Lentes="No";
+
+    String Lunes="No";
+    String Martes="No";
+    String Miercoles="No";
+    String Jueves="No";
+    String Viernes="No";
+    String Sabado="No";
+    String Domingo="No";
+    String DosAmSeisAm="No";
+    String SeisAmDiezAm="No";
+    String DiezAmDosPm="No";
+    String DosPmSeisPm="No";
+    String SeisPmDiezPm="No";
+    String DiezPmDosAm="No";
+
     String Experiencia;  //VERIFICAR ID CON CHK
     String Certificados;
     String FotoCertificado; //Cambiar por un archivo de imagen
@@ -143,18 +185,11 @@ public class FormularioGeneral2 extends AppCompatActivity {
     String FotoActividades; //Cambiar por un archivo de imagen
     String OtroEquipo;
 
-    
-
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_general2);
-
         Instanciar();
 
         //Recibiendo extras
@@ -231,6 +266,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
         chkUnam=(CheckBox)findViewById(R.id.chk_UNAM);
         chkIpn=(CheckBox)findViewById(R.id.chk_IPN);
         chkUam=(CheckBox)findViewById(R.id.chk_UAM);
+
         chkEscombros=(CheckBox)findViewById(R.id.chk_Recoger_escombros);
         chkAcordonar=(CheckBox)findViewById(R.id.chk_Acordonar_area);
         chkRevisionEstructuras=(CheckBox)findViewById(R.id.chk_Revision_estructuras);
@@ -242,6 +278,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
         chkZona1Lider=(CheckBox)findViewById(R.id.chk_Zona1Lider);
         chkZona2Lider=(CheckBox)findViewById(R.id.chk_Zona2Lider);
         chkZona3Lider=(CheckBox)findViewById(R.id.chk_Zona3Lider);
+
         chkZona1=(CheckBox)findViewById(R.id.chk_Zona1); //modificar para solo poder elegir una
         chkZona2=(CheckBox)findViewById(R.id.chk_Zona2);//modificar para solo poder elegir una
         chkZona3=(CheckBox)findViewById(R.id.chk_Zona3);//modificar para solo poder elegir una
@@ -249,7 +286,6 @@ public class FormularioGeneral2 extends AppCompatActivity {
         chkLugar2=(CheckBox)findViewById(R.id.chk_Lugar2);
         chkLugar3=(CheckBox)findViewById(R.id.chk_Lugar3);
         chkAgregarLugar=(CheckBox)findViewById(R.id.chk_Agregar_Lugar);
-        chkMixto=(CheckBox)findViewById(R.id.chk_ResidentesMixtoAlbergue);
         chkHombre=(CheckBox)findViewById(R.id.chk_ResidentesHombresAlbergue);
         chkMujer=(CheckBox)findViewById(R.id.chk_ResidentesMujeresAlbergue);
         chkNinos=(CheckBox)findViewById(R.id.chk_ResidentesNinosAlbergue);
@@ -267,6 +303,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
         chkViernes=(CheckBox)findViewById(R.id.chk_Viernes);
         chkSabado=(CheckBox)findViewById(R.id.chk_Sabado);
         chkDomingo=(CheckBox)findViewById(R.id.chk_Domingo);
+
         chk0206=(CheckBox)findViewById(R.id.chk_0206);
         chk0610=(CheckBox)findViewById(R.id.chk_0610);
         chk1014=(CheckBox)findViewById(R.id.chk_1014);
@@ -295,8 +332,31 @@ public class FormularioGeneral2 extends AppCompatActivity {
         txtFotoActividades=(EditText) findViewById(R.id.txt_FotoActividades);
         txtOtroEquipo=(EditText) findViewById(R.id.txt_OtroEquipo);
 
-
     }
+
+    //EXTRAER INFORMACIÓN
+    private void ExtraerData(){
+        Experiencia=txtExperiencia.getText().toString();
+        Certificados=txtCertificados.getText().toString();
+        FotoCertificado=txtFotoCertificado.getText().toString();
+        Automovil=txtAutomovil.getText().toString();
+        Motocicleta=txtMotocicleta.getText().toString();
+        Bicicleta=txtBicicleta.getText().toString();
+        Camion=txtCamion.getText().toString();
+        Camioneta=txtCamioneta.getText().toString();
+        Van=txtVan.getText().toString();
+        Otros=txtOtros.getText().toString();
+        NombreMiembro=txtNombreMiembro.getText().toString();
+        FotoActividadesLider=txtFotoActividadesLider.getText().toString();
+        DireccionNuevoLugar=txtDireccionNuevoLugar.getText().toString();
+        DescripcionNuevoLugar=txtDescripcionNuevoLugar.getText().toString();
+        CapacidadAlbergue=txtCapacidadAlbergue.getText().toString();
+        FotosNuevoLugar=txtFotosNuevoLugar.getText().toString();
+        DescripcionActividadesRealizadas=txtDescripcionActividadesRealizadas.getText().toString();
+        FotoActividades=txtFotoActividades.getText().toString();
+        OtroEquipo=txtOtroEquipo.getText().toString();
+    }
+
 
     private void CargarViews(){
 
@@ -363,8 +423,10 @@ public class FormularioGeneral2 extends AppCompatActivity {
             startActivity(regresar);
         }
     }
-//¿QUÉ INSTITUCIÓN TE GUSTARÍA CUBRIR?
-    private void Unchecked(){
+
+
+//METODOS SELECCION UNICA
+    private void UncheckedInstitucion(){
         chkProteccion.setChecked(false);
         chkSismologico.setChecked(false);
         chkMeteorologico.setChecked(false);
@@ -379,95 +441,427 @@ public class FormularioGeneral2 extends AppCompatActivity {
         chkIpn.setChecked(false);
         chkUam.setChecked(false);
     }
-    //¿?
+
+    private void UncheckedZonaLider(){
+        chkZona1Lider.setChecked(false);
+        chkZona2Lider.setChecked(false);
+        chkZona3Lider.setChecked(false);
+    }
+
+    private void UncheckedZona(){
+        chkZona1.setChecked(false);
+        chkZona2.setChecked(false);
+        chkZona3.setChecked(false);
+    }
+
+    private void UncheckedLugar(){
+        chkLugar1.setChecked(false);
+        chkLugar2.setChecked(false);
+        chkLugar3.setChecked(false);
+    }
 
 
+    //EXTRACCION DATOS DE LOS CHECKBOX
+
+
+    //INSTITUCION
     public void Proteccion(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkProteccion.toggle();
+        Institucion="Protección civil";
     }
 
     public void Sismologico(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkSismologico.toggle();
+        Institucion="Sismológico Nacional";
     }
 
     public void Meteorologico(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkMeteorologico.toggle();
+        Institucion="Meteorologico Nacional";
     }
 
     public void Cruzroja(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkCruzroja.toggle();
+        Institucion="Cruz Roja";
     }
 
     public void Gfederal(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkGfederal.toggle();
+        Institucion="Gobierno federal";
     }
 
     public void Glocal(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkGlocal.toggle();
+        Institucion="Gobierno local";
     }
 
     public void Pfederal(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkPfederal.toggle();
+        Institucion="Policía federal";
     }
 
     public void Bomberos(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkBomberos.toggle();
+        Institucion="Bomberos";
     }
 
     public void Sedena(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkSedena.toggle();
+        Institucion="SEDENA";
     }
 
     public void Sep(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkSep.toggle();
+        Institucion="SEP";
     }
 
     public void Unam(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkUnam.toggle();
+        Institucion="UNAM";
     }
 
     public void Ipn(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkIpn.toggle();
+        Institucion="IPN";
     }
 
     public void Uam(View CheckBox){
-        Unchecked();
+        UncheckedInstitucion();
         chkUam.toggle();
+        Institucion="UAM";
     }
 
-    //EXTRAER INFORMACIÓN
-    private void ExtraerData(){
-        Experiencia=txtExperiencia.getText().toString();
-        Certificados=txtCertificados.getText().toString();
-        FotoCertificado=txtFotoCertificado.getText().toString();
-        Automovil=txtAutomovil.getText().toString();
-        Motocicleta=txtMotocicleta.getText().toString();
-        Bicicleta=txtBicicleta.getText().toString();
-        Camion=txtCamion.getText().toString();
-        Camioneta=txtCamioneta.getText().toString();
-        Van=txtVan.getText().toString();
-        Otros=txtOtros.getText().toString();
-        NombreMiembro=txtNombreMiembro.getText().toString();
-        FotoActividadesLider=txtFotoActividadesLider.getText().toString();
-        DireccionNuevoLugar=txtDireccionNuevoLugar.getText().toString();
-        DescripcionNuevoLugar=txtDescripcionNuevoLugar.getText().toString();
-        CapacidadAlbergue=txtCapacidadAlbergue.getText().toString();
-        FotosNuevoLugar=txtFotosNuevoLugar.getText().toString();
-        DescripcionActividadesRealizadas=txtDescripcionActividadesRealizadas.getText().toString();
-        FotoActividades=txtFotoActividades.getText().toString();
-        OtroEquipo=txtOtroEquipo.getText().toString();
+
+    //ACTIVIDADES BRIGADA
+    public void Escombros(View CheckBox){
+        if(Escombros.equals("No")){
+            Escombros="Si";
+        }
+        else if(Escombros.equals("Si")){
+            Escombros="No";
+        }
+    }
+
+    public void Acordonar(View CheckBox){
+        if(Acordonar.equals("No")){
+            Acordonar="Si";
+        }
+        else if(Acordonar.equals("Si")){
+            Acordonar="No";
+        }
+    }
+
+    public void RevisionEstructuras(View CheckBox){
+        if(RevisionEstructuras.equals("No")){
+            RevisionEstructuras="Si";
+        }
+        else if(RevisionEstructuras.equals("Si")){
+            RevisionEstructuras="No";
+        }
+    }
+
+    public void RedElectrica(View CheckBox){
+        if(RedElectrica.equals("No")){
+            RedElectrica="Si";
+        }
+        else if(RedElectrica.equals("Si")){
+            RedElectrica="No";
+        }
+    }
+
+    public void Carpinteria(View CheckBox){
+        if(Carpinteria.equals("No")){
+            Carpinteria="Si";
+        }
+        else if(Carpinteria.equals("Si")){
+            Carpinteria="No";
+        }
+    }
+
+    public void SustanciasQuimicas(View CheckBox){
+        if(SustanciasQuimicas.equals("No")){
+            SustanciasQuimicas="Si";
+        }
+        else if(SustanciasQuimicas.equals("Si")){
+            SustanciasQuimicas="No";
+        }
+    }
+
+    public void Construccion(View CheckBox){
+        if(Construccion.equals("No")){
+            Construccion="Si";
+        }
+        else if(Construccion.equals("Si")){
+            Construccion="No";
+        }
+    }
+
+    public void PrimerosAuxilios(View CheckBox){
+        if(PrimerosAuxilios.equals("No")){
+            PrimerosAuxilios="Si";
+        }
+        else if(PrimerosAuxilios.equals("Si")){
+            PrimerosAuxilios="No";
+        }
+    }
+
+
+    //ZONA LIDER
+    public void Zona1Lider(View CheckBox){
+        UncheckedZonaLider();
+        chkZona1Lider.toggle();
+        ZonaLider="Zona 1";
+    }
+    public void Zona2Lider(View CheckBox){
+        UncheckedZonaLider();
+        chkZona2Lider.toggle();
+        ZonaLider="Zona 2";
+    }
+    public void Zona3Lider(View CheckBox){
+        UncheckedZonaLider();
+        chkZona3Lider.toggle();
+        ZonaLider="Zona 3";
+    }
+
+
+    //ZONA
+    public void Zona1(View CheckBox){
+        UncheckedZona();
+        chkZona1.toggle();
+        Zona="Zona 1";
+    }
+    public void Zona2(View CheckBox){
+        UncheckedZona();
+        chkZona2.toggle();
+        Zona="Zona 2";
+    }
+    public void Zona3(View CheckBox){
+        UncheckedZona();
+        chkZona3.toggle();
+        Zona="Zona 3";
+    }
+
+
+    //LUGAR
+    public void Lugar1(View CheckBox){
+        UncheckedLugar();
+        chkLugar1.toggle();
+        Lugar="Lugar 1";
+    }
+    public void Lugar2(View CheckBox){
+        UncheckedLugar();
+        chkLugar2.toggle();
+        Lugar="Lugar 2";
+    }
+    public void Lugar3(View CheckBox){
+        UncheckedLugar();
+        chkLugar3.toggle();
+        Lugar="Lugar 3";
+    }
+
+
+    //RESIDENTES
+    public void Mujer(View CheckBox){
+        if(Mujer.equals("No")){
+            Mujer="Si";
+        }
+        else if(Mujer.equals("Si")){
+            Mujer="No";
+        }
+    }
+    public void Hombre(View CheckBox){
+        if(Hombre.equals("No")){
+            Hombre="Si";
+        }
+        else if(Hombre.equals("Si")){
+            Hombre="No";
+        }
+    }
+    public void Ninos(View CheckBox){
+        if(Ninos.equals("No")){
+            Ninos="Si";
+        }
+        else if(Ninos.equals("Si")){
+            Ninos="No";
+        }
+    }
+    public void Mascotas(View CheckBox){
+        if(Mascotas.equals("No")){
+            Mascotas="Si";
+        }
+        else if(Mascotas.equals("Si")){
+            Mascotas="No";
+        }
+    }
+
+
+    //EQUIPO
+    public void Botas(View CheckBox){
+        if(Botas.equals("No")){
+            Botas="Si";
+        }
+        else if(Botas.equals("Si")){
+            Botas="No";
+        }
+    }
+    public void Chaleco(View CheckBox){
+        if(Chaleco.equals("No")){
+            Chaleco="Si";
+        }
+        else if(Chaleco.equals("Si")){
+            Chaleco="No";
+        }
+    }
+    public void Casco(View CheckBox){
+        if(Casco.equals("No")){
+            Casco="Si";
+        }
+        else if(Casco.equals("Si")){
+            Casco="No";
+        }
+    }
+    public void Guantes(View CheckBox){
+        if(Guantes.equals("No")){
+            Guantes="Si";
+        }
+        else if(Guantes.equals("Si")){
+            Guantes="No";
+        }
+    }
+    public void Cubrebocas(View CheckBox){
+        if(Cubrebocas.equals("No")){
+            Cubrebocas="Si";
+        }
+        else if(Cubrebocas.equals("Si")){
+            Cubrebocas="No";
+        }
+    }
+    public void Lentes(View CheckBox){
+        if(Lentes.equals("No")){
+            Lentes="Si";
+        }
+        else if(Lentes.equals("Si")){
+            Lentes="No";
+        }
+    }
+
+    //DISPONIBILIDAD
+    public void Lunes(View CheckBox){
+        if(Lunes.equals("No")){
+            Lunes="Si";
+        }
+        else if(Lunes.equals("Si")){
+            Lunes="No";
+        }
+    }
+    public void Martes(View CheckBox){
+        if(Martes.equals("No")){
+            Martes="Si";
+        }
+        else if(Martes.equals("Si")){
+            Martes="No";
+        }
+    }
+    public void Miercoles(View CheckBox){
+        if(Miercoles.equals("No")){
+            Miercoles="Si";
+        }
+        else if(Miercoles.equals("Si")){
+            Miercoles="No";
+        }
+    }
+    public void Jueves(View CheckBox){
+        if(Jueves.equals("No")){
+            Jueves="Si";
+        }
+        else if(Jueves.equals("Si")){
+            Jueves="No";
+        }
+    }
+    public void Viernes(View CheckBox){
+        if(Viernes.equals("No")){
+            Viernes="Si";
+        }
+        else if(Viernes.equals("Si")){
+            Viernes="No";
+        }
+    }
+    public void Sabado(View CheckBox){
+        if(Sabado.equals("No")){
+            Sabado="Si";
+        }
+        else if(Sabado.equals("Si")){
+            Sabado="No";
+        }
+    }
+    public void Domingo(View CheckBox){
+        if(Domingo.equals("No")){
+            Domingo="Si";
+        }
+        else if(Domingo.equals("Si")){
+            Domingo="No";
+        }
+    }
+
+    public void DosAmSeisAm(View CheckBox){
+        if(DosAmSeisAm.equals("No")){
+            DosAmSeisAm="Si";
+        }
+        else if(DosAmSeisAm.equals("Si")){
+            DosAmSeisAm="No";
+        }
+    }
+    public void SeisAmDiezAm(View CheckBox){
+        if(SeisAmDiezAm.equals("No")){
+            SeisAmDiezAm="Si";
+        }
+        else if(SeisAmDiezAm.equals("Si")){
+            SeisAmDiezAm="No";
+        }
+    }
+    public void DiezAmDosPm(View CheckBox){
+        if(DiezAmDosPm.equals("No")){
+            DiezAmDosPm="Si";
+        }
+        else if(DiezAmDosPm.equals("Si")){
+            DiezAmDosPm="No";
+        }
+    }
+    public void DosPmSeisPm(View CheckBox){
+        if(DosPmSeisPm.equals("No")){
+            DosPmSeisPm="Si";
+        }
+        else if(DosPmSeisPm.equals("Si")){
+            DosPmSeisPm="No";
+        }
+    }
+    public void SeisPmDiezPm(View CheckBox){
+        if(SeisPmDiezPm.equals("No")){
+            SeisPmDiezPm="Si";
+        }
+        else if(SeisPmDiezPm.equals("Si")){
+            SeisPmDiezPm="No";
+        }
+    }
+    public void DiezPmDosAm(View CheckBox){
+        if(DiezPmDosAm.equals("No")){
+            DiezPmDosAm="Si";
+        }
+        else if(DiezPmDosAm.equals("Si")){
+            DiezPmDosAm="No";
+        }
     }
 
 }

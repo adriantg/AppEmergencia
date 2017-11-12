@@ -54,7 +54,7 @@ public class FormularioGeneral extends AppCompatActivity {
     String Paterno;
     String Materno;
     String Nombre;
-    int Edad;
+    String Edad;
     String Ocupacion;
     String Sexo;
     String Nacionalidad;
@@ -62,18 +62,18 @@ public class FormularioGeneral extends AppCompatActivity {
     String FotoID; //Reemplazar posteriormente con insertar imagen
     String Actividad;
     String Calle;
-    int NumExterior;
-    int NumInterior;
+    String NumExterior;
+    String NumInterior;
     String Colonia;
-    int CP;
+    String CP;
     String Delegacion;
     String Estado;
     String FotoDomicilio;  //Reemplazar con insertar imagen
-    int Telefono;
-    int Celular;
+    String Telefono;
+    String Celular;
     String Correo;
     String RefNombre;
-    int RefTelefono;
+    String RefTelefono;
     String RefCorreo;
 
 
@@ -107,12 +107,18 @@ public class FormularioGeneral extends AppCompatActivity {
         btnSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ID="prueba";//Momentaneo hasta activar AltaSQL
-                //AltaSQL();
-                Intent siguiente = new Intent(FormularioGeneral.this, FormularioGeneral2.class);
-                siguiente.putExtra("ID",ID);        //Pasa a la siguiente actividad el valor de ID para nueva tabla
-                siguiente.putExtra("Actividad",Actividad);  //Para saber que desplegar y que no.
-                startActivity(siguiente);
+
+                try{
+                    AltaSQL();
+                    Intent siguiente = new Intent(FormularioGeneral.this, FormularioGeneral2.class);
+                    siguiente.putExtra("ID",ID);        //Pasa a la siguiente actividad el valor de ID para nueva tabla
+                    siguiente.putExtra("Actividad",Actividad);  //Para saber que desplegar y que no.
+                    startActivity(siguiente);
+                }
+                catch(Exception excepcion){
+                    Toast.makeText(FormularioGeneral.this,""+excepcion,Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });
@@ -153,38 +159,24 @@ public class FormularioGeneral extends AppCompatActivity {
                         break;
                     case 1:
                         Actividad="Usuario Web";
-                        //Intent intent1 = new Intent(FormularioGeneral.this, Sweb.class);
-                        //startActivity(intent1);
                         break;
                     case 2:
                         Actividad="Líder brigadista";
-                        //Intent intent2 = new Intent(FormularioGeneral.this, Sbrigadista.class);
-                        //startActivity(intent2);
                         break;
                     case 3:
                         Actividad="Líder transporte";
-                        //Intent intent3 = new Intent(FormularioGeneral.this, Stransporte.class);
-                        //startActivity(intent3);
                         break;
                     case 4:
                         Actividad="Líder paramédicos";
-                        //Intent intent4 = new Intent(FormularioGeneral.this, Sparamedico.class);
-                        //startActivity(intent4);
-                        break;
+                       break;
                     case 5:
                         Actividad="Información desastre";
-                        //Intent intent5 = new Intent(FormularioGeneral.this, Sdesastre.class);
-                        //startActivity(intent5);
                         break;
                     case 6:
                         Actividad="Información albergue";
-                        //Intent intent6 = new Intent(FormularioGeneral.this, Salbergue.class);
-                        //startActivity(intent6);
                         break;
                     case 7:
                         Actividad="Información acopio";
-                        //Intent intent7 = new Intent(FormularioGeneral.this, Sacopio.class);
-                        //startActivity(intent7);
                         break;
 
                 }
@@ -252,24 +244,24 @@ public class FormularioGeneral extends AppCompatActivity {
          Materno=txtMaterno.getText().toString();
          Paterno=txtPaterno.getText().toString();
          Nombre=txtNombre.getText().toString();
-         Edad=Integer.parseInt(txtEdad.getText().toString());
+         Edad=txtEdad.getText().toString();
          Ocupacion=txtOcupacion.getText().toString();
          Nacionalidad=txtNacionalidad.getText().toString();
          ID=txtID.toString();
          FotoID=txtFotoID.getText().toString(); //Reemplazar posteriormente con insertar imagen
          Calle=txtCalle.getText().toString();
-         NumExterior=Integer.parseInt(txtNumExterior.toString());
-         NumInterior=Integer.parseInt(txtNumInterior.toString());
+         NumExterior=txtNumExterior.toString();
+         NumInterior=txtNumInterior.toString();
          Colonia=txtColonia.getText().toString();
-         CP=Integer.parseInt(txtCP.toString());
+         CP=txtCP.toString();
          Delegacion=txtDelegacion.getText().toString();
          Estado=txtEstado.getText().toString();
          FotoDomicilio=txtFotoDomicilio.getText().toString();  //Reemplazar con insertar imagen
-         Telefono=Integer.parseInt(txtTelefono.toString());
-         Celular=Integer.parseInt(txtCelular.toString());
+         Telefono=txtTelefono.toString();
+         Celular=txtCelular.toString();
          Correo=txtCorreo.getText().toString();
          RefNombre=txtRefNombre.getText().toString();
-         RefTelefono=Integer.parseInt(txtRefTelefono.toString());
+         RefTelefono=txtRefTelefono.toString();
          RefCorreo=txtRefCorreo.getText().toString();
     }
 
@@ -305,12 +297,8 @@ public class FormularioGeneral extends AppCompatActivity {
         registro.put("RefCorreo",RefCorreo);
         registro.put("Actividad",Actividad);
 
-        bd.insert("FormGen1", null, registro);
+        bd.insert("FormGen2", null, registro);
         bd.close();
-        /*
-        et_precio.setText("");
-        et_codigo.setText("");
-        et_descripcion.setText("");*/
 
         Toast.makeText(this,"Se han ingresado los datos",Toast.LENGTH_SHORT).show();
     }

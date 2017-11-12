@@ -693,12 +693,12 @@
                             android:textSize="18sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"/>
-                        <!--Mixto-->
+                        <!--Mujeres-->
                         <CheckBox
-                            android:id="@+id/chk_ResidentesMixtoAlbergue"
+                            android:id="@+id/chk_ResidentesMujeresAlbergue"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Mixto"
+                            android:text="@string/Mujeres"
                             android:textColor="@android:color/black" />
                         <!--Hombre-->
                         <CheckBox
@@ -706,13 +706,6 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Hombres"
-                            android:textColor="@android:color/black" />
-                        <!--Mujeres-->
-                        <CheckBox
-                            android:id="@+id/chk_ResidentesMujeresAlbergue"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/Mujeres"
                             android:textColor="@android:color/black" />
                         <!--Niños-->
                         <CheckBox
