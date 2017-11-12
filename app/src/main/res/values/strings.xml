@@ -1,11 +1,75 @@
 <resources>
+    <!--    ESTRUCTURA PARA STRING-ARRAY
+    <string-array name="Pregunta_Redes_sociales">
+        <item>@string/Facebook</item>
+        <item>@string/Twitter</item>
+    </string-array>
+    -->
     <string name="app_name">App E</string>
     <string name="Datos_de_contacto">Datos de contacto:</string>
     <string name="Direccion_web">Dirección web:</string>
     <string name="Telefonos">Teléfonos:</string>
     <string name="Correo_electronico">Correo electrónico:</string>
+
+    <string name="Pregunta_Redes_Sociales">¿Qué redes sociales manejas?</string>
     <string name="Facebook">Facebook:</string>
     <string name="Twitter">Twitter:</string>
+    <string name="Instagram">Twitter:</string>
+    <string name="Snapchat">Snapchat:</string>
+
+    <string name="Pregunta_Intitucion_Cubrir">¿Qué institución te gustaría cubrir?</string>
+    <string name="Proteccion_Civil">Protección Civil</string>
+    <string name="Sismológico_Nacional">Sismológico nacional</string>
+    <string name="Meteorologico_Nacional">Meteorológico Nacional</string>
+    <string name="Cruz_Roja">Cruz Roja</string>
+    <string name="Gobierno_Local">Gobierno Local</string>
+    <string name="Gobierno_Federal">Gobierno Federal</string>
+    <string name="Policia_Federal">Policia Federal</string>
+    <string name="Bombero">Bomberos</string>
+    <string name="SEDENA">SEDENA</string>
+    <string name="SEP">SEP</string>
+    <string name="UNAM">UNAM</string>
+    <string name="IPN">IPN</string>
+    <string name="UAM">UAM</string>
+
+    <string name="Pregunta_Experiencia">¿Con qué experiencia de este tipo cuentas?</string>
+    <string name="Pregunta_Certificados">¿Qué certificados tienes?</string>
+    <string name="Descripcion_documento">Agrega una breve descripción y archivo visual del documento</string>
+
+    <string name="Pregunta_Transporte">¿Con cuántos elementos de transporte cuenta tu brigada?</string>
+    <string name="Automovil">Automóvil</string>
+    <string name="Motocicleta">Motocicleta</string>
+    <string name="Bicicleta">Bicicleta</string>
+    <string name="Camion">Camión</string>
+    <string name="Camioneta">Camioneta</string>
+    <string name="Van">Van</string>
+
+    <string name="Pregunta_Actividades_Brigadadistas">¿Qué actividades realiza tu brigada?</string>
+    <string name="Recoger_Escombros_Brigadistas">Recoger escombros</string>
+    <string name="Acordonar_Brigadistas">Acordonar el área</string>
+    <string name="Revision_Estructuras_Brigadistas">Revisión de Estructuras</string>
+    <string name="Revision_Red_Electrica_Brigadistas">Revisión de la Red eléctrica</string>
+    <string name="Carpinteria_Brigadistas">Carpintería</string>
+    <string name="Sustancias_Quimicas_Brigadistas">Manejo de sustancias químicas peligrosas</string>
+    <string name="Construcción_Brigadistas">Construcción</string>
+    <string name="Primeros_Auxilios_Brigadistas">Primeros auxilios</string>
+    <string name="Otros_Brigadistas">Otros(+)</string>
+    <string name="Nombre_Miembros_Brigadistas">Nombre de los miembros que dispone</string>
+    <string name="Ingresar_Nombre_Brigadistas">Favor de ingresar nombre por nombre</string>
+    <string name="Anexar_Imagen_Brigadistas">Favor de anexar imagenes que prueben tu actividad</string>
+    <string name="Zonas_Trabajar_Brigadistas">Zonas en las que puedes trabajar</string>
+    <string name="Zona1">     Zona 1</string>
+    <string name="Zona2">     Zona 2</string>
+    <string name="Zona3">     Zona 3</string>
+
+    <string name="Pregunta_zona">¿En qué zona te encuentras?</string>
+    <string name="Direccion_lugar_afectado">Dirección del lugar afectado</string>
+    <string name="Lugar1">Lugar 1</string>
+    <string name="Lugar2">Lugar 2</string>
+    <string name="Lugar3">Lugar 3</string>
+    <string name="Agregar_lugar">Agregar lugar (+)</string>
+    <string name="Agregar_lugar_submenu">Agregar lugar</string>
+
     <string name="Comunicados">Comunicados:</string>
     <string name="Titulo">Título:</string>
     <string name="Hora">Hora:</string>
@@ -21,23 +85,31 @@
     <string name="Contraseña">Contraseña: </string>
     <string name="Administrador_centro_acopio">Administrador de centro de acopio       </string>
     <string name="Descripcion_Administrador_centro_acopio">"\nEste tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.\n"</string>
-    <string name="Pregunta_zona">¿En qué zona te encuentras?</string>
-    <string name="Zona1">     Zona 1</string>
-    <string name="Zona2">     Zona 2</string>
-    <string name="Zona3">     Zona 3</string>
-    <string name="Direccion_lugar_afectado">Dirección del lugar afectado</string>
-    <string name="Lugar1">Lugar 1</string>
-    <string name="Lugar2">Lugar 2</string>
-    <string name="Lugar3">Lugar 3</string>
-    <string name="Agregar_lugar">Agregar lugar (+)</string>
-    <string name="Agregar_lugar_submenu">Agregar lugar</string>
-    <string name="Direccion_centro_acopio">Dirección del centro de acopio</string>
-    <string name="Descripcion_centro_acopio">Descripción del centro de acopio</string>
-    <string name="Fotos_centro_acopio">Fotos del centro de acopio</string>
-    <string name="Archivo_imagen">Aquí va un archivo de imagen</string>
-    <string name="Pregunta_actividades_centro_acopio">¿Qué actividades realizas en el centro de acopio?</string>
-    <string name="Descripcion_actividades">Agrega una breve descripción de las actividades que realizas en el lugar</string>
-    <string name="Dias_disponibles">Días disponibles</string>
+    <string name="Direccion_Lugar">Dirección del lugar</string>
+    <string name="Descripcion_Lugar">Descripción del lugar</string>
+    <string name="Capacidad">Capacidad</string>
+
+    <string name="Residentes_aceptan">Residentes que se aceptan</string>
+    <string name="Mixto">Mixto</string>
+    <string name="Hombres">Hombre</string>
+    <string name="Mujeres">Mujeres</string>
+    <string name="Niños">Niños</string>
+    <string name="Mascotas">Mascotas</string>
+    <string name="Fotos_lugar">Fotos del lugar</string>
+
+    <string name="Pregunta_Actividades_Realizas">¿Qué actividades realizas?</string>
+    <string name="Descripcion_Actividades">Agrega una breve descripción de las actividades que realizas en el lugar </string>
+    <string name="Foto_Actividades">Por favor, agrega una foto relacionada a las actividades que realizas</string>
+
+    <string name="Pregunta_Equipo">¿Con qué equipo cuentas?</string>
+    <string name="Botas">Botas con casquillo</string>
+    <string name="Chaleco">Chaleco</string>
+    <string name="Casco">Casco</string>
+    <string name="Guantes">Guantes de carnaza</string>
+    <string name="Cubrebocas">Cubrebocas</string>
+    <string name="Lentes">Lentes de protección</string>
+    <string name="Otros">Otros (+)</string>
+
     <string name="Lunes">Lunes</string>
     <string name="Martes">Martes</string>
     <string name="Miercoles">Miércoles</string>
@@ -45,6 +117,7 @@
     <string name="Viernes">Viernes</string>
     <string name="Sabado">Sábado</string>
     <string name="Domingo">Domingo</string>
+
     <string name="Horario">Horarios disponibles</string>
     <string name="Dos_a_seis">02:00-06:00</string>
     <string name="Seis_a_diez">06:00-10:00</string>
@@ -52,39 +125,34 @@
     <string name="Catorce_a_dieciocho">14:00-18:00</string>
     <string name="Dieciocho_a_veintidos">18:00-22:00</string>
     <string name="Veintidos_a_dos">22:00-02:00</string>
+
     <string name="Enviar_registro">ENVIAR REGISTRO</string>
+
+
+
+    <!--    VERIFICAR SI SE USAN ESTOS STRINGS      -->
+    <string name="Direccion_centro_acopio">Dirección del centro de acopio</string>
+    <string name="Descripcion_centro_acopio">Descripción del centro de acopio</string>
+    <string name="Fotos_centro_acopio">Fotos del centro de acopio</string>
+    <string name="Archivo_imagen">Aquí va un archivo de imagen</string>
+    <string name="Pregunta_actividades_centro_acopio">¿Qué actividades realizas en el centro de acopio?</string>
+    <string name="Descripcion_actividades">Agrega una breve descripción de las actividades que realizas en el lugar</string>
+    <string name="Dias_disponibles">Días disponibles</string>
+
+
     <string name="Administrador_albergue">Administrador de albergue</string>
     <string name="Descripcion_administrador_albergue">Este tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.</string>
     <string name="Direccion_albergue">Dirección del albergue</string>
     <string name="Descripcion_albergue">Descripción del albergue</string>
     <string name="Capacidad_albergue">Capacidad</string>
-    <string name="Residentes_aceptan">Residentes que se aceptan</string>
-    <string name="Mixto">Mixto</string>
-    <string name="Hombres">Hombre</string>
-    <string name="Mujeres">Mujeres</string>
-    <string name="Niños">Niños</string>
-    <string name="Mascotas">Mascotas</string>
-    <string name="Fotos_albergues">Fotos del albergue</string>
+
     <string name="Pregunta_actividades_albergue">¿Qué actividades realizas en el albergue?</string>
     <string name="Siguiente">Siguiente</string>
     <string name="Lider_Brigadistas">Líder de brigadistas</string>
     <string name="Descripción_Lider_Brigadistas">\nEste tipo de usuario tiene organizado un grupo de voluntarios con conocimientos adecuados capaces de ejercer como brigadistas. Tiene la información de otros voluntarios y es capaz de organizarlos para ayudar donde se necesite. Es capaz de compartir sus conocimientos a otras personas, por lo que puede organizar grupos de capacitación para sumarse a su equipo de trabajo. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar.\n</string>
-    <string name="Pregunta_Experiencia_Brigadistas">¿Con qué experiencia de este tipo cuentas?</string>
-    <string name="Certificados_Brigadistas">¿Qué certificados tienes?</string>
-    <string name="Pregunta_Actividades_Brigadadistas">¿Qué actividades realiza tu brigada?</string>
-    <string name="Recoger_Escombros_Brigadistas">Recoger escombros</string>
-    <string name="Acordonar_Brigadistas">Acordonar el área</string>
-    <string name="Revision_Estructuras_Brigadistas">Revisión de Estructuras</string>
-    <string name="Revision_Red_Electrica_Brigadistas">Revisión de la Red eléctrica</string>
-    <string name="Carpinteria_Brigadistas">Carpintería</string>
-    <string name="Sustancias_Quimicas_Brigadistas">Manejo de sustancias químicas peligrosas</string>
-    <string name="Construcción_Brigadistas">Construcción</string>
-    <string name="Primeros_Auxilios_Brigadistas">Primeros auxilios</string>
-    <string name="Otros_Brigadistas">Otros(+)</string>
-    <string name="Nombre_Miembros_Brigadistas">Nombre de los miembros que dispone</string>
-    <string name="Ingresar_Nombre_Brigadistas">Favor de ingresar nombre por nombre</string>
-    <string name="Zonas_Trabajar_Brigadistas">Zonas en las que puedes trabajar</string>
-    <string name="Anexar_Imagen_Brigadistas">Favor de anexar imagenes que prueben tu actividad</string>
+
+
+
 
 
 </resources>

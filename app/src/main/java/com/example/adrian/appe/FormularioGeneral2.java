@@ -22,7 +22,6 @@ import java.util.ArrayList;
 
 public class FormularioGeneral2 extends AppCompatActivity {
 
-
     String Actividad;
     ArrayList<String> ArrayMiembros;
 

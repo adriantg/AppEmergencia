@@ -30,7 +30,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_TituloActividad"
-                    android:text="Titulo"
+                    android:text="@string/Titulo"
                     android:textAllCaps="false"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_DescripcionActividad"
-                android:text="Descripcion"
+                android:text="@string/Descripcion"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textSize="18sp"
@@ -70,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Qué redes sociales manejas?"
+                    android:text="@string/Pregunta_Redes_Sociales"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -78,35 +78,35 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Facebook"
+                    android:text="@string/Facebook"
                     android:id="@+id/chk_Facebook"
                     android:onClick="Facebook"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Twitter"
+                    android:text="@string/Twitter"
                     android:onClick="Twitter"
                     android:id="@+id/chk_Twitter"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Instagram"
+                    android:text="@string/Instagram"
                     android:onClick="Instagram"
                     android:id="@+id/chk_Instagram"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Snapchat"
+                    android:text="@string/Snapchat"
                     android:onClick="Snapchat"
                     android:id="@+id/chk_Snapchat"
                     android:textColor="@android:color/black" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Qué institución te gustaría cubrir?"
+                    android:text="@string/Pregunta_Intitucion_Cubrir"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -114,56 +114,56 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Protección Civil"
+                    android:text="@string/Proteccion_Civil"
                     android:id="@+id/chk_Proteccion"
                     android:onClick="Proteccion"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Sismológico Nacional"
+                    android:text="@string/Sismológico_Nacional"
                     android:id="@+id/chk_Sismologico"
                     android:onClick="Sismologico"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Meteorológico Nacional"
+                    android:text="@string/Meteorologico_Nacional"
                     android:id="@+id/chk_Meteorologico"
                     android:onClick="Meteorologico"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Cruz Roja"
+                    android:text="@string/Cruz_Roja"
                     android:id="@+id/chk_Cruzroja"
                     android:onClick="Cruzroja"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Gobierno Local"
+                    android:text="@string/Gobierno_Local"
                     android:id="@+id/chk_Gobiernolocal"
                     android:onClick="Glocal"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Gobierno Federal"
+                    android:text="@string/Gobierno_Federal"
                     android:id="@+id/chk_Gobiernofederal"
                     android:onClick="Gfederal"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Policía Federal"
+                    android:text="@string/Policia_Federal"
                     android:id="@+id/chk_Policiafederal"
                     android:onClick="Pfederal"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Bomberos"
+                    android:text="@string/Bombero"
                     android:id="@+id/chk_Bomberos"
                     android:onClick="Bomberos"
                     android:textColor="@android:color/black" />
@@ -215,7 +215,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Con qué experiencia de este tipo cuentas?"
+                    android:text="@string/Pregunta_Experiencia"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
