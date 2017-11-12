@@ -80,23 +80,27 @@
                     android:layout_height="wrap_content"
                     android:text="      Facebook"
                     android:id="@+id/chk_Facebook"
+                    android:onClick="Facebook"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="      Twitter"
+                    android:onClick="Twitter"
                     android:id="@+id/chk_Twitter"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="      Instagram"
+                    android:onClick="Instagram"
                     android:id="@+id/chk_Instagram"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="      Snapchat"
+                    android:onClick="Snapchat"
                     android:id="@+id/chk_Snapchat"
                     android:textColor="@android:color/black" />
                 <TextView
@@ -414,48 +418,56 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Recoger escombros"
+                        android:onClick="Escombros"
                         android:id="@+id/chk_Recoger_escombros"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Acordonar el área"
+                        android:onClick="Acordonar"
                         android:id="@+id/chk_Acordonar_area"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Revisión de estructuras"
+                        android:onClick="RevisionEstructuras"
                         android:id="@+id/chk_Revision_estructuras"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Red eléctrica"
+                        android:onClick="RedElectrica"
                         android:id="@+id/chk_Red_electrica"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Carpintería"
+                        android:onClick="Carpinteria"
                         android:id="@+id/chk_Carpinteria"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Manejo de sustancias químicas peligrosas"
+                        android:onClick="SustanciasQuimicas"
                         android:id="@+id/chk_Sustancias_quimicas"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Construcción"
+                        android:onClick="Construccion"
                         android:id="@+id/chk_Construccion"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Primeros auxilios"
+                        android:onClick="PrimerosAuxilios"
                         android:id="@+id/chk_Primeros_auxilios"
                         android:textColor="@android:color/black" />
                     <EditText
@@ -529,6 +541,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="      Zona1"
+                    android:onClick="Zona1Lider"
                     android:textColor="@android:color/black" />
 
                 <CheckBox
@@ -536,12 +549,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="      Zona2"
+                    android:onClick="Zona2Lider"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:id="@+id/chk_Zona3Lider"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="      Zona3"
+                    android:onClick="Zona3Lider"
                     android:textColor="@android:color/black" />
 
             </LinearLayout>
@@ -566,6 +581,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Zona1"
+                android:onClick="Zona1"
                 android:textColor="@android:color/black" />
             <!--Checkbox Zona 2 -->
             <CheckBox
@@ -573,6 +589,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Zona2"
+                android:onClick="Zona2"
                 android:textColor="@android:color/black" />
             <!--Checkbox Zona 3 -->
             <CheckBox
@@ -580,6 +597,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Zona3"
+                android:onClick="Zona3"
                 android:textColor="@android:color/black" />
 
             <!--SECCIÓN LUGAR AFECTADO -->
@@ -597,6 +615,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lugar1"
+                android:onClick="Lugar1"
                 android:textColor="@android:color/black" />
             <!--Checkbox LUGAR 2 -->
             <CheckBox
@@ -604,6 +623,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lugar2"
+                android:onClick="Lugar2"
                 android:textColor="@android:color/black" />
             <!--Checkbox LUGAR 3 -->
             <CheckBox
@@ -611,13 +631,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lugar3"
+                android:onClick="Lugar3"
                 android:textColor="@android:color/black" />
             <!--Opción Agregar lugar(+) -->
             <CheckBox
                 android:id="@+id/chk_Agregar_Lugar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/Agregar_lugar"/>
+                android:text="@string/Agregar_lugar"
+                android:onClick="AgregarLugar"/>
 
             <!--SECCIÓN AGREGAR LUGAR (SUBMENÚ)  Solo si seleccionó Agregar Lugar -->
                 <LinearLayout
@@ -659,10 +681,10 @@
                 android:textSize="16sp"
                 android:textStyle="normal" />
             <!--Agregar Descripción  -->
-                    <EditText
-                        android:id="@+id/txt_DescripcionNuevoLugar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/txt_DescripcionNuevoLugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
                     <!-- Seccion Capacidad/Residentes Solo Albergue-->
                     <LinearLayout
@@ -699,6 +721,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Mujeres"
+                            android:onClick="Mujer"
                             android:textColor="@android:color/black" />
                         <!--Hombre-->
                         <CheckBox
@@ -706,6 +729,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Hombres"
+                            android:onClick="Hombre"
                             android:textColor="@android:color/black" />
                         <!--Niños-->
                         <CheckBox
@@ -713,6 +737,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Niños"
+                            android:onClick="Ninos"
                             android:textColor="@android:color/black" />
                         <!--Mascotas-->
                         <CheckBox
@@ -720,6 +745,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/Mascotas"
+                            android:onClick="Mascotas"
                             android:textColor="@android:color/black" />
 
                     </LinearLayout>
@@ -798,30 +824,35 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Botas con casquillo"
+                        android:onClick="Botas"
                         android:id="@+id/chk_Botas"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Chaleco"
+                        android:onClick="Chaleco"
                         android:id="@+id/chk_Chaleco"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Casco"
+                        android:onClick="Casco"
                         android:id="@+id/chk_Casco"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Guantes de carnaza"
+                        android:onClick="Guantes"
                         android:id="@+id/chk_Guantes"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Cubrebocas"
+                        android:onClick="Cubrebocas"
                         android:id="@+id/chk_Cubrebocas"
                         android:textColor="@android:color/black" />
 
@@ -829,6 +860,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="      Lentes de protección"
+                        android:onClick="Lentes"
                         android:id="@+id/chk_Lentes"
                         android:textColor="@android:color/black" />
                     <EditText
@@ -860,6 +892,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Lunes"
+                android:onClick="Lunes"
                 android:textColor="@android:color/black" />
             <!--Martes -->
             <CheckBox
@@ -867,6 +900,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Martes"
+                android:onClick="Martes"
                 android:textColor="@android:color/black" />
             <!--Miércoles -->
             <CheckBox
@@ -874,6 +908,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Miercoles"
+                android:onClick="Miercoles"
                 android:textColor="@android:color/black" />
             <!--Jueves-->
             <CheckBox
@@ -881,6 +916,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Jueves"
+                android:onClick="Jueves"
                 android:textColor="@android:color/black" />
             <!--Viernes -->
             <CheckBox
@@ -888,6 +924,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Viernes"
+                android:onClick="Viernes"
                 android:textColor="@android:color/black" />
             <!--Sábado -->
             <CheckBox
@@ -895,6 +932,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Sabado"
+                android:onClick="Sabado"
                 android:textColor="@android:color/black" />
             <!--Domingo -->
             <CheckBox
@@ -902,6 +940,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Domingo"
+                android:onClick="Domingo"
                 android:textColor="@android:color/black" />
 
             <!--SECCIÓN HORARIO DESEADO -->
@@ -919,6 +958,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Dos_a_seis"
+                android:onClick="DosAmSeisAm"
                 android:textColor="@android:color/black" />
             <!--06:00-10:00-->
             <CheckBox
@@ -926,6 +966,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Seis_a_diez"
+                android:onClick="SeisAmDiezAm"
                 android:textColor="@android:color/black" />
             <!--10:00-14:00-->
             <CheckBox
@@ -933,6 +974,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Diez_a_catorce"
+                android:onClick="DiezAmDosPm"
                 android:textColor="@android:color/black" />
             <!--14:00-18:00-->
             <CheckBox
@@ -940,6 +982,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Catorce_a_dieciocho"
+                android:onClick="DosPmSeisPm"
                 android:textColor="@android:color/black" />
             <!--18:00-22:00-->
             <CheckBox
@@ -947,6 +990,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Dieciocho_a_veintidos"
+                android:onClick="SeisPmDiezPm"
                 android:textColor="@android:color/black" />
             <!--22:00-02:00-->
             <CheckBox
@@ -954,6 +998,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/Veintidos_a_dos"
+                android:onClick="DiezPmDosAm"
                 android:textColor="@android:color/black" />
             </LinearLayout>
 

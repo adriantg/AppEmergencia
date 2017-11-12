@@ -297,7 +297,7 @@ public class FormularioGeneral extends AppCompatActivity {
         registro.put("RefCorreo",RefCorreo);
         registro.put("Actividad",Actividad);
 
-        bd.insert("FormGen2", null, registro);
+        bd.insert("FormGen1", null, registro);
         bd.close();
 
         Toast.makeText(this,"Se han ingresado los datos",Toast.LENGTH_SHORT).show();

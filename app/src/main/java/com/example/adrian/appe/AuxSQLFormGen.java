@@ -20,7 +20,16 @@ public class AuxSQLFormGen extends SQLiteOpenHelper{
                 "Colonia TEXT,CP TEXT,Delegacion TEXT,Estado TEXT,Domicilio TEXT,Telefono TEXT,Celular TEXT,Correo TEXT," +
                 "RefNombre TEXT,RefTelefono TEXT,RefCorreo TEXT,Actividad TEXT,UNIQUE (ID))";  //Identificacion y Domicilio posteriormente se cambian por BLOB
 
-        String sqlTabla2 = "CREATE TABLE FormGen2 (ID TEXT PRIMARY KEY,UNIQUE (ID)";
+        String sqlTabla2 = "CREATE TABLE FormGen2 (ID TEXT PRIMARY KEY,Facebook TEXT,Twitter TEXT,Instagram TEXT,Snapchat TEXT," +
+                "Institucion TEXT,Escombros TEXT,Acordonar TEXT,RevisionEstructuras TEXT,RedElectrica TEXT,Carpinteria TEXT," +
+                "SustanciasQuimicas TEXT,Construccion TEXT,PrimerosAuxilios TEXT,ZonaLider TEXT,Zona TEXT,Lugar TEXT,Mujer TEXT," +
+                "Hombre TEXT,Ninos TEXT,Mascotas TEXT,Botas TEXT,Chaleco TEXT,Casco TEXT,Guantes TEXT,Cubrebocas TEXT,Lentes TEXT," +
+                "Lunes TEXT,Martes TEXT,Miercoles TEXT,Jueves TEXT,Viernes TEXT,Sabado TEXT,Domingo TEXT,DosAmSeisAm TEXT,SeisAmDiezAm TEXT," +
+                "DiezAmDosPm TEXT,DosPmSeisPm TEXT,SeisPmDiezPm TEXT,DiezPmDosAm TEXT,Experiencia TEXT,Certificados TEXT,FotoCertificado TEXT," +
+                "Automovil TEXT,Motocicleta TEXT,Bicicleta TEXT,Camion TEXT,Camioneta TEXT,Van TEXT,Otros TEXT,Miembros TEXT," +
+                "FotoActividadesLider TEXT,DireccionNuevoLugar TEXT,DescripcionNuevoLugar TEXT,CapacidadAlbergue TEXT,FotosNuevoLugar TEXT," +
+                "DescripcionActividadesRealizadas TEXT,FotoActividades TEXT,OtroEquipo TEXT,UNIQUE (ID)";
+
 
         public AuxSQLFormGen(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
             super(context, name, factory, version);

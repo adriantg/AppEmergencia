@@ -1,6 +1,8 @@
 package com.example.adrian.appe;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -15,15 +17,20 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class FormularioGeneral2 extends AppCompatActivity {
 
-    int ID;
+
     String Actividad;
+    ArrayList<String> ArrayMiembros;
 
     //COMPLETADO sección de botónes
     Button btnRegresar;
     Button btnEnviarRegistro;
     Button btnIngresa;
+    Button btnAgregarMiembro;
 
     //COMPLETADO sección de Layout
     LinearLayout lytSeccionWeb;
@@ -125,6 +132,12 @@ public class FormularioGeneral2 extends AppCompatActivity {
     EditText txtOtroEquipo;
 
     //Variables para guardar la información
+    String ID;
+
+    String Facebook="No";
+    String Twitter="No";
+    String Instagram="No";
+    String Snapchat="No";
     String Institucion;
 
     String Escombros="No";
@@ -175,7 +188,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
     String Camioneta;
     String Van;
     String Otros;
-    String NombreMiembro;
+    String Miembros;
     String FotoActividadesLider; //Cambiar por un archivo de imagen
     String DireccionNuevoLugar;
     String DescripcionNuevoLugar;
@@ -194,7 +207,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
 
         //Recibiendo extras
         Intent siguiente= getIntent();
-        ID= siguiente.getIntExtra("ID", 0);
+        ID= siguiente.getStringExtra("ID");
         Actividad=siguiente.getStringExtra("Actividad");
         Toast.makeText(this,""+Actividad,Toast.LENGTH_SHORT).show();
 
@@ -211,13 +224,28 @@ public class FormularioGeneral2 extends AppCompatActivity {
             }
         });
 
+        btnAgregarMiembro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayMiembros.add(txtNombreMiembro.getText().toString());
+                txtNombreMiembro.setText("");
+                Toast.makeText(FormularioGeneral2.this,"Miembro agregado",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
 
         btnEnviarRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(FormularioGeneral2.this,Inicio.class);
-                Toast.makeText(FormularioGeneral2.this,"Datos guardados",Toast.LENGTH_SHORT).show();
-                startActivity(intent);
+                try{
+                    AltaSQL();
+                    Intent intent=new Intent(FormularioGeneral2.this,Inicio.class);
+                    startActivity(intent);
+                }                
+                catch(Exception excepcion){
+                    Toast.makeText(FormularioGeneral2.this,""+excepcion,Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -230,7 +258,9 @@ public class FormularioGeneral2 extends AppCompatActivity {
         btnRegresar = (Button) findViewById(R.id.btn_Regresar);
         btnEnviarRegistro=(Button)findViewById(R.id.btn_Enviar_Registro);
         btnIngresa=(Button)findViewById(R.id.btn_IngresarMiembro);
+        btnAgregarMiembro=(Button)findViewById((R.id.btn_IngresarMiembro));
 
+        ArrayMiembros=new ArrayList<String>();
 
         lytSeccionWeb=(LinearLayout)findViewById(R.id.Seccion_Web);
 
@@ -346,7 +376,6 @@ public class FormularioGeneral2 extends AppCompatActivity {
         Camioneta=txtCamioneta.getText().toString();
         Van=txtVan.getText().toString();
         Otros=txtOtros.getText().toString();
-        NombreMiembro=txtNombreMiembro.getText().toString();
         FotoActividadesLider=txtFotoActividadesLider.getText().toString();
         DireccionNuevoLugar=txtDireccionNuevoLugar.getText().toString();
         DescripcionNuevoLugar=txtDescripcionNuevoLugar.getText().toString();
@@ -355,67 +384,151 @@ public class FormularioGeneral2 extends AppCompatActivity {
         DescripcionActividadesRealizadas=txtDescripcionActividadesRealizadas.getText().toString();
         FotoActividades=txtFotoActividades.getText().toString();
         OtroEquipo=txtOtroEquipo.getText().toString();
+        Miembros=convertArrayToString(ArrayMiembros);
     }
 
+    //CARGAR A LA BASE DE DATOS
+    private void AltaSQL(){
+        AuxSQLFormGen auxSQL = new AuxSQLFormGen(this,"FormularioGeneral",null,1);
+        SQLiteDatabase bd = auxSQL.getWritableDatabase();
+        ExtraerData();
 
+        ContentValues registro = new ContentValues();
+
+        registro.put("ID",ID);
+
+        registro.put("Facebook",Facebook);
+        registro.put("Twitter",Twitter);
+        registro.put("Instagram",Instagram);
+        registro.put("Snapchat",Snapchat);
+        registro.put("Institucion",Institucion);
+
+        registro.put("Escombros",Escombros);
+        registro.put("Acordonar",Acordonar);
+        registro.put("RevisionEstructuras",RevisionEstructuras);
+        registro.put("RedElectrica",RedElectrica);
+        registro.put("Carpinteria",Carpinteria);
+        registro.put("SustanciasQuimicas",SustanciasQuimicas);
+        registro.put("Construccion",Construccion);
+        registro.put("PrimerosAuxilios",PrimerosAuxilios);
+
+        registro.put("ZonaLider",ZonaLider);
+
+        registro.put("Zona",Zona);
+        registro.put("Lugar",Lugar);
+        registro.put("Mujer",Mujer);
+        registro.put("Hombre",Hombre);
+        registro.put("Ninos",Ninos);
+        registro.put("Mascotas",Mascotas);
+        registro.put("Botas",Botas);
+        registro.put("Chaleco",Chaleco);
+        registro.put("Casco",Casco);
+        registro.put("Guantes",Guantes);
+        registro.put("Cubrebocas",Cubrebocas);
+        registro.put("Lentes",Lentes);
+
+        registro.put("Lunes",Lunes);
+        registro.put("Martes",Martes);
+        registro.put("Miercoles",Miercoles);
+        registro.put("Jueves",Jueves);
+        registro.put("Viernes",Viernes);
+        registro.put("Sabado",Sabado);
+        registro.put("Domingo",Domingo);
+        registro.put("DosAmSeisAm",DosAmSeisAm);
+        registro.put("SeisAmDiezAm",SeisAmDiezAm);
+        registro.put("DiezAmDosPm",DiezAmDosPm);
+        registro.put("DosPmSeisPm",DosPmSeisPm);
+        registro.put("SeisPmDiezPm",SeisPmDiezPm);
+        registro.put("DiezPmDosAm",DiezPmDosAm);
+
+        registro.put("Experiencia",Experiencia);
+        registro.put("Certificados",Certificados);
+        registro.put("FotoCertificado",FotoCertificado);
+        registro.put("Automovil",Automovil);
+        registro.put("Motocicleta",Motocicleta);
+        registro.put("Bicicleta",Bicicleta);
+        registro.put("Camion",Camion);
+        registro.put("Camioneta",Camioneta);
+        registro.put("Van",Van);
+        registro.put("Otros",Otros);
+        registro.put("Miembros",Miembros);
+        registro.put("FotoActividadesLider",FotoActividadesLider);
+        registro.put("DireccionNuevoLugar",DireccionNuevoLugar);
+        registro.put("DescripcionNuevoLugar",DescripcionNuevoLugar);
+        registro.put("CapacidadAlbergue",CapacidadAlbergue);
+        registro.put("FotosNuevoLugar",FotosNuevoLugar);
+        registro.put("DescripcionActividadesRealizadas",DescripcionActividadesRealizadas);
+        registro.put("FotoActividades",FotoActividades);
+        registro.put("OtroEquipo",OtroEquipo);
+
+        bd.insert("FormGen2", null, registro);
+        bd.close();
+
+        Toast.makeText(this,"Solicitud de registro enviada",Toast.LENGTH_SHORT).show();
+    }
+
+    //CARGAR SECCIONES
     private void CargarViews(){
 
         if(Actividad.equals("Usuario Web")){
             txtTitulo.setText("Usuario web");
             txtDescripcion.setText("\nEste tipo de usuario es el encargado de publicar en la aplicación comunicados oficiales. Tiene la obligación de estar al pendiente de las páginas oficiales de una institución pública y recopilar los avisos, los comunicados e información relevante publicada en ellas.\n");
-            lytSeccionLider.removeAllViewsInLayout();
-            lytSeccionLugarActividades.removeAllViewsInLayout();
+            lytSeccionLider.setVisibility(View.GONE);
+            lytSeccionLugarActividades.setVisibility(View.GONE);
 
         }
         else if(Actividad.equals("Líder brigadista")){
             txtTitulo.setText("Líder de brigada");
             txtDescripcion.setText("\nEste tipo de usuario tiene organizado un grupo de voluntarios con conocimientos adecuados capaces de ejercer como brigadistas. Tiene la información de otros voluntarios y es capaz de organizarlos para ayudar donde se necesite. Es capaz de compartir sus conocimientos a otras personas, por lo que puede organizar grupos de capacitación para sumarse a su equipo de trabajo. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar.\n");
-            lytSeccionWeb.removeAllViewsInLayout();
-            lytSeccionTransportes.removeAllViewsInLayout();
-            lytSeccionLugarActividades.removeAllViewsInLayout();
+            lytSeccionWeb.setVisibility(View.GONE);
+            lytSeccionTransportes.setVisibility(View.GONE);
+            lytSeccionLugarActividades.setVisibility(View.GONE);
 
         }
         else if(Actividad.equals("Líder transporte")){
             txtTitulo.setText("Líder de transportistas");
             txtDescripcion.setText("\nOrganiza a aquellas personas que poseen al menos una forma de movilizar personas, víveres, herramienta o material especializado a las zonas en las que se necesiten. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar.\n");
-            lytSeccionWeb.removeAllViewsInLayout();
-            lytSeccionActividadesBrigada.removeAllViewsInLayout();
-            lytSeccionCertificados.removeAllViewsInLayout();
-            lytSeccionLugarActividades.removeAllViewsInLayout();
+            lytSeccionWeb.setVisibility(View.GONE);
+            lytSeccionActividadesBrigada.setVisibility(View.GONE);
+            lytSeccionCertificados.setVisibility(View.GONE);
+            lytSeccionLugarActividades.setVisibility(View.GONE);
 
         }
         else if(Actividad.equals("Líder paramédicos")){
             txtTitulo.setText("Líder de paramédicos");
             txtDescripcion.setText("\nEste tipo de usuario tiene organizado un grupo de voluntarios con conocimientos adecuados capaces de ejercer como paramédicos. Tiene la información de otros voluntarios y es capaz de organizarlos para ayudar donde se necesite. Es capaz de compartir sus conocimientos a otras personas, por lo que puede organizar grupos de capacitación para sumarse a su equipo de trabajo. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar donde se necesite.\n");
-            lytSeccionWeb.removeAllViewsInLayout();
-            lytSeccionTransportes.removeAllViewsInLayout();
-            lytSeccionActividadesBrigada.removeAllViewsInLayout();
-            lytSeccionLugarActividades.removeAllViewsInLayout();
+            lytSeccionWeb.setVisibility(View.GONE);
+            lytSeccionTransportes.setVisibility(View.GONE);
+            lytSeccionActividadesBrigada.setVisibility(View.GONE);
+            lytSeccionLugarActividades.setVisibility(View.GONE);
         }
         else if(Actividad.equals("Información desastre")){
             txtTitulo.setText("Voluntatrio en zona de desastre");
             txtDescripcion.setText("\nEste tipo de usuario es el encargado de estar presente en una zona de afectación, por ejemplo: zona de derrumbe o inundación. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe reportar sucesos relevantes, como identificación de las personas afectadas y el estado de las mismas.\n");
-            lytSeccionWeb.removeAllViewsInLayout();
-            lytSeccionLider.removeAllViewsInLayout();
-            lytSeccionAgregarAlbergue.removeAllViewsInLayout();
+            lytSeccionWeb.setVisibility(View.GONE);
+            lytSeccionLider.setVisibility(View.GONE);
+            lytSeccionAgregarLugar.setVisibility(View.GONE);
+            lytSeccionAgregarAlbergue.setVisibility(View.GONE);
 
 
         }
         else if(Actividad.equals("Información albergue")){
             txtTitulo.setText("Voluntatrio en albergue");
             txtDescripcion.setText("\nEste tipo de usuario es el encargado de estar presente en un albergue. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el albergue.\n");
-            lytSeccionWeb.removeAllViewsInLayout();
-            lytSeccionLider.removeAllViewsInLayout();
-            lytSeccionEquipoDisponible.removeAllViewsInLayout();
+            lytSeccionWeb.setVisibility(View.GONE);
+            lytSeccionLider.setVisibility(View.GONE);
+            lytSeccionAgregarLugar.setVisibility(View.GONE);
+            lytSeccionEquipoDisponible.setVisibility(View.GONE);
 
         }
         else if(Actividad.equals("Información acopio")){
             txtTitulo.setText("Voluntatrio en centro de acopio");
             txtDescripcion.setText("\nEste tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.\n");
-            lytSeccionWeb.removeAllViewsInLayout();
-            lytSeccionLider.removeAllViewsInLayout();
-            lytSeccionAgregarAlbergue.removeAllViewsInLayout();
-            lytSeccionEquipoDisponible.removeAllViewsInLayout();
+            lytSeccionWeb.setVisibility(View.GONE);
+            lytSeccionLider.setVisibility(View.GONE);
+            lytSeccionAgregarLugar.setVisibility(View.GONE);
+            lytSeccionAgregarAlbergue.setVisibility(View.GONE);
+            lytSeccionEquipoDisponible.setVisibility(View.GONE);
         }
         else{
             Intent regresar=new Intent(FormularioGeneral2.this,FormularioGeneral.class);
@@ -424,8 +537,20 @@ public class FormularioGeneral2 extends AppCompatActivity {
         }
     }
 
+    //AGREGAR LUGAR
+    public void AgregarLugar(View CheckBox){
+        chkLugar1.setChecked(false);
+        chkLugar2.setChecked(false);
+        chkLugar3.setChecked(false);
+        if(chkAgregarLugar.isChecked()){
+           lytSeccionAgregarLugar.setVisibility(View.VISIBLE);
+        }
+        else{
+            lytSeccionAgregarLugar.setVisibility(View.GONE);
+        }
+    }
 
-//METODOS SELECCION UNICA
+    //METODOS SELECCION UNICA
     private void UncheckedInstitucion(){
         chkProteccion.setChecked(false);
         chkSismologico.setChecked(false);
@@ -452,17 +577,52 @@ public class FormularioGeneral2 extends AppCompatActivity {
         chkZona1.setChecked(false);
         chkZona2.setChecked(false);
         chkZona3.setChecked(false);
-    }
+        }
 
     private void UncheckedLugar(){
         chkLugar1.setChecked(false);
         chkLugar2.setChecked(false);
         chkLugar3.setChecked(false);
+        chkAgregarLugar.setChecked(false);
+        lytSeccionAgregarLugar.setVisibility(View.GONE);
     }
 
 
     //EXTRACCION DATOS DE LOS CHECKBOX
 
+    //REDES SOCIALES
+    public void Facebook(View CheckBox){
+        if(Facebook.equals("No")){
+            Facebook="Si";
+        }
+        else if(Facebook.equals("Si")){
+            Facebook="No";
+        }
+    }
+    public void Twitter(View CheckBox){
+        if(Twitter.equals("No")){
+            Twitter="Si";
+        }
+        else if(Twitter.equals("Si")){
+            Twitter="No";
+        }
+    }
+    public void Instagram(View CheckBox){
+        if(Instagram.equals("No")){
+            Instagram="Si";
+        }
+        else if(Instagram.equals("Si")){
+            Instagram="No";
+        }
+    }
+    public void Snapchat(View CheckBox){
+        if(Snapchat.equals("No")){
+            Snapchat="Si";
+        }
+        else if(Snapchat.equals("Si")){
+            Snapchat="No";
+        }
+    }
 
     //INSTITUCION
     public void Proteccion(View CheckBox){
@@ -862,6 +1022,24 @@ public class FormularioGeneral2 extends AppCompatActivity {
         else if(DiezPmDosAm.equals("Si")){
             DiezPmDosAm="No";
         }
+    }
+
+    //Convertir arrayList a string y viceversa
+    public static String Separador = "__,__";
+    public static String convertArrayToString(ArrayList<String> array){
+        String str = "";
+        for (int i = 0;i<array.size(); i++) {
+            str = str+array.get(i);
+            // Do not append comma at the end of last element
+            if(i<array.size()-1){
+                str = str+Separador;
+            }
+        }
+        return str;
+    }
+    public static String[] convertStringToArray(String str){
+        String[] arr = str.split(Separador);
+        return arr;
     }
 
 }
