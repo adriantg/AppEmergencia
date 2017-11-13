@@ -30,7 +30,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_TituloActividad"
-                    android:text="Titulo"
+                    android:text="@string/Titulo"
                     android:textAllCaps="false"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_DescripcionActividad"
-                android:text="Descripcion"
+                android:text="@string/Descripcion"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textSize="18sp"
@@ -70,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Qué redes sociales manejas?"
+                    android:text="@string/Pregunta_Redes_Sociales"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -78,35 +78,35 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Facebook"
+                    android:text="@string/Facebook"
                     android:id="@+id/chk_Facebook"
                     android:onClick="Facebook"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Twitter"
+                    android:text="@string/Twitter"
                     android:onClick="Twitter"
                     android:id="@+id/chk_Twitter"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Instagram"
+                    android:text="@string/Instagram"
                     android:onClick="Instagram"
                     android:id="@+id/chk_Instagram"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Snapchat"
+                    android:text="@string/Snapchat"
                     android:onClick="Snapchat"
                     android:id="@+id/chk_Snapchat"
                     android:textColor="@android:color/black" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Qué institución te gustaría cubrir?"
+                    android:text="@string/Pregunta_Intitucion_Cubrir"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -114,91 +114,91 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Protección Civil"
+                    android:text="@string/Proteccion_Civil"
                     android:id="@+id/chk_Proteccion"
                     android:onClick="Proteccion"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Sismológico Nacional"
+                    android:text="@string/Sismológico_Nacional"
                     android:id="@+id/chk_Sismologico"
                     android:onClick="Sismologico"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Meteorológico Nacional"
+                    android:text="@string/Meteorologico_Nacional"
                     android:id="@+id/chk_Meteorologico"
                     android:onClick="Meteorologico"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Cruz Roja"
+                    android:text="@string/Cruz_Roja"
                     android:id="@+id/chk_Cruzroja"
                     android:onClick="Cruzroja"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Gobierno Local"
+                    android:text="@string/Gobierno_Local"
                     android:id="@+id/chk_Gobiernolocal"
                     android:onClick="Glocal"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Gobierno Federal"
+                    android:text="@string/Gobierno_Federal"
                     android:id="@+id/chk_Gobiernofederal"
                     android:onClick="Gfederal"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Policía Federal"
+                    android:text="@string/Policia_Federal"
                     android:id="@+id/chk_Policiafederal"
                     android:onClick="Pfederal"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Bomberos"
+                    android:text="@string/Bombero"
                     android:id="@+id/chk_Bomberos"
                     android:onClick="Bomberos"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      SEDENA"
+                    android:text="@string/SEDENA"
                     android:id="@+id/chk_SEDENA"
                     android:onClick="Sedena"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      SEP"
+                    android:text="@string/SEDENA"
                     android:id="@+id/chk_SEP"
                     android:onClick="Sep"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      UNAM"
+                    android:text="@string/UNAM"
                     android:id="@+id/chk_UNAM"
                     android:onClick="Unam"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      IPN"
+                    android:text="@string/IPN"
                     android:id="@+id/chk_IPN"
                     android:onClick="Ipn"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      UAM"
+                    android:text="@string/UAM"
                     android:id="@+id/chk_UAM"
                     android:onClick="Uam"
                     android:textColor="@android:color/black" />
@@ -215,7 +215,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Con qué experiencia de este tipo cuentas?"
+                    android:text="@string/Pregunta_Experiencia"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -235,7 +235,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="¿Qué certificados tienes?"
+                    android:text="@string/Pregunta_Certificados"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -244,7 +244,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Agrega una breve descripción y archivo visual del documento."
+                    android:text="@string/Descripcion_documento"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal" />
@@ -271,7 +271,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="¿Con cuántos elementos de transporte cuenta tu brigada?"
+                        android:text="@string/Pregunta_Transporte"
                         android:textAllCaps="false"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
@@ -285,7 +285,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Automóvil:"
+                            android:text="@string/Automovil"
                             android:textAllCaps="false"
                             android:textColor="@android:color/black"
                             android:textSize="16sp"
@@ -305,7 +305,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Motocicleta:"
+                            android:text="@string/Motocicleta"
                             android:textAllCaps="false"
                             android:textColor="@android:color/black"
                             android:textSize="16sp"
@@ -325,7 +325,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bicicleta:"
+                            android:text="@string/Bicicleta"
                             android:textAllCaps="false"
                             android:textColor="@android:color/black"
                             android:textSize="16sp"
@@ -345,7 +345,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Camión:"
+                            android:text="@string/Camion"
                             android:textAllCaps="false"
                             android:textColor="@android:color/black"
                             android:textSize="16sp"
@@ -365,7 +365,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Camioneta:"
+                            android:text="@string/Camioneta"
                             android:textAllCaps="false"
                             android:textColor="@android:color/black"
                             android:textSize="16sp"
@@ -385,7 +385,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Van:"
+                            android:text="@string/Van"
                             android:textAllCaps="false"
                             android:textColor="@android:color/black"
                             android:textSize="16sp"
@@ -409,7 +409,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="¿Qué actividades realiza tu brigada ?"
+                        android:text="@string/Pregunta_Actividades_Brigadadistas"
                         android:textAllCaps="false"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -417,63 +417,63 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Recoger escombros"
+                        android:text="@string/Recoger_Escombros_Brigadistas"
                         android:onClick="Escombros"
                         android:id="@+id/chk_Recoger_escombros"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Acordonar el área"
+                        android:text="@string/Acordonar_Brigadistas"
                         android:onClick="Acordonar"
                         android:id="@+id/chk_Acordonar_area"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Revisión de estructuras"
+                        android:text="@string/Revision_Estructuras_Brigadistas"
                         android:onClick="RevisionEstructuras"
                         android:id="@+id/chk_Revision_estructuras"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Red eléctrica"
+                        android:text="@string/Revision_Red_Electrica_Brigadistas"
                         android:onClick="RedElectrica"
                         android:id="@+id/chk_Red_electrica"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Carpintería"
+                        android:text="@string/Carpinteria_Brigadistas"
                         android:onClick="Carpinteria"
                         android:id="@+id/chk_Carpinteria"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Manejo de sustancias químicas peligrosas"
+                        android:text="@string/Sustancias_Quimicas_Brigadistas"
                         android:onClick="SustanciasQuimicas"
                         android:id="@+id/chk_Sustancias_quimicas"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Construcción"
+                        android:text="@string/Construcción_Brigadistas"
                         android:onClick="Construccion"
                         android:id="@+id/chk_Construccion"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Primeros auxilios"
+                        android:text="@string/Primeros_Auxilios_Brigadistas"
                         android:onClick="PrimerosAuxilios"
                         android:id="@+id/chk_Primeros_auxilios"
                         android:textColor="@android:color/black" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Otros(+)"
+                        android:text="@string/Otros_Brigadistas"
                         android:id="@+id/txt_Otrobrigadista"/>
 
                 </LinearLayout>
@@ -481,7 +481,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombre de los miembros que dispones"
+                    android:text="@string/Nombre_Miembros_Brigadistas"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -490,7 +490,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Favor de ingresar nombre por nombre."
+                    android:text="@string/Ingresar_Nombre_Brigadistas"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal" />
@@ -508,14 +508,14 @@
                         android:id="@+id/btn_IngresarMiembro"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Ingresar"
+                        android:text="@string/Ingresa"
                         android:layout_weight="3"/>
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Favor de anexar imagenes que prueben tu actividad"
+                    android:text="@string/Foto_Actividades"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -530,7 +530,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Zonas en las que puedes trabajar"
+                    android:text="@string/Zonas_Trabajar_Brigadistas"
                     android:textAllCaps="false"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
@@ -540,7 +540,7 @@
                     android:id="@+id/chk_Zona1Lider"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Zona1"
+                    android:text="@string/Zona1"
                     android:onClick="Zona1Lider"
                     android:textColor="@android:color/black" />
 
@@ -548,14 +548,14 @@
                     android:id="@+id/chk_Zona2Lider"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Zona2"
+                    android:text="@string/Zona2"
                     android:onClick="Zona2Lider"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:id="@+id/chk_Zona3Lider"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="      Zona3"
+                    android:text="@string/Zona3"
                     android:onClick="Zona3Lider"
                     android:textColor="@android:color/black" />
 
@@ -662,7 +662,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dirección del lugar"
+                android:text="@string/Direccion_lugar_afectado"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
@@ -676,7 +676,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Descripción del lugar"
+                android:text="@string/Descripcion_Lugar"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
@@ -697,7 +697,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/Capacidad_albergue"
+                            android:text="@string/Capacidad"
                             android:textAllCaps="false"
                             android:textSize="16sp"
                             android:textStyle="normal" />
@@ -754,7 +754,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fotos del lugar"
+                android:text="@string/Fotos_lugar"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
@@ -772,7 +772,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿Qué actividades realizas?"
+                android:text="@string/Pregunta_Actividades_Realizas_Albergue"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -781,7 +781,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Descripcion_actividades"
+                android:text="@string/Descripcion_Actividades"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal"/>
@@ -794,7 +794,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Por favor, agrega una foto relacionada a las actividades que realizas"
+                android:text="@string/Foto_Actividades"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal"/>
@@ -815,7 +815,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="¿Con qué equipo cuentas?"
+                        android:text="@string/Pregunta_Equipo"
                         android:textAllCaps="false"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -823,35 +823,35 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Botas con casquillo"
+                        android:text="@string/Botas"
                         android:onClick="Botas"
                         android:id="@+id/chk_Botas"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Chaleco"
+                        android:text="@string/Chaleco"
                         android:onClick="Chaleco"
                         android:id="@+id/chk_Chaleco"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Casco"
+                        android:text="@string/Casco"
                         android:onClick="Casco"
                         android:id="@+id/chk_Casco"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Guantes de carnaza"
+                        android:text="@string/Guantes"
                         android:onClick="Guantes"
                         android:id="@+id/chk_Guantes"
                         android:textColor="@android:color/black" />
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Cubrebocas"
+                        android:text="@string/Cubrebocas"
                         android:onClick="Cubrebocas"
                         android:id="@+id/chk_Cubrebocas"
                         android:textColor="@android:color/black" />
@@ -859,14 +859,14 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="      Lentes de protección"
+                        android:text="@string/Lentes"
                         android:onClick="Lentes"
                         android:id="@+id/chk_Lentes"
                         android:textColor="@android:color/black" />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="Otros(+)"
+                        android:text="@string/Otros"
                         android:id="@+id/txt_OtroEquipo"/>
 
                 </LinearLayout>
@@ -881,7 +881,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/Dias_disponibles"
+                android:text="@string/Dias"
                 android:textAllCaps="false"
                 android:textColor="@android:color/black"
                 android:textSize="18sp"
