@@ -5,6 +5,46 @@
         <item>@string/Twitter</item>
     </string-array>
     -->
+
+    <!--INICIA STRINGS FORMULARIO GENERAL 1-->
+    <string name="Verificado">VERIFICADO</string>
+    <string name="Ingresa">INGRESAR</string>
+    <string name="Registro">REGISTRO</string>
+    <string name="Registro_Usuario">Registro de usuarios</string>
+    <string name="Intruccion_Registro_Datos">Bienvenido, por favor ingresa tus datos en los siguientes campos:</string>
+    <string name="Datos_Personales">Datos personales</string>
+    <string name="Apellido_Paterno">Apellido paterno:</string>
+    <string name="Apellido_Materno">Apellido materno:</string>
+    <string name="Nombre">Nombre(s):</string>
+    <string name="Edad">Edad</string>
+    <string name="Ocupacion">Ocupación</string>
+    <string name="Sexo">Sexo</string>
+    <string name="Femenino">Femenino</string>
+    <string name="Masculino">Masculino</string>
+    <string name="Nacionalidad">Nacionalidad</string>
+    <string name="CURP_ID">CURP/ID</string>
+    <string name="Anexar_Foto_Identificacion">Por favor anexa una imagen de tu identificación</string>
+    <string name="Calle">Calle</string>
+    <string name="Numero_Exterior">Número exterior</string>
+    <string name="Numero_Interiror">Número interior</string>
+    <string name="Colonia">Colonia</string>
+    <string name="Codigo_Postal">Código postal</string>
+    <string name="Delegacion">Delegación</string>
+    <string name="Estado">Estado</string>
+    <string name="Anexar_Imagen_Comprobante_Domicilio">Por favor anexa una imagen de tu comprobante de domicilio</string>
+    <string name="Telefono_Local">Teléfono local</string>
+    <string name="Celular">Celular</string>
+
+    <string name="Persona_Referencia">Persona de referencia</string>
+    <string name="Telefono">Teléfono</string>
+
+    <string name="Actividades">Actividades</string>
+    <string name="Instruccion_Selecciona_Actividad">Selecciona uno de los siguientes campos, de acuerdo a la actividad que realizas</string>
+
+    <string name="Siguiente">Siguiente</string>
+    <!--Termina STRINGS FORMULARIO GENERAL 1-->
+
+    <!--INICIA STRINGS FORMULARIO GENERAL 2-->
     <string name="app_name">App E</string>
     <string name="Datos_de_contacto">Datos de contacto:</string>
     <string name="Direccion_web">Dirección web:</string>
@@ -14,7 +54,7 @@
     <string name="Pregunta_Redes_Sociales">¿Qué redes sociales manejas?</string>
     <string name="Facebook">Facebook:</string>
     <string name="Twitter">Twitter:</string>
-    <string name="Instagram">Twitter:</string>
+    <string name="Instagram">Instagram:</string>
     <string name="Snapchat">Snapchat:</string>
 
     <string name="Pregunta_Intitucion_Cubrir">¿Qué institución te gustaría cubrir?</string>
@@ -77,9 +117,8 @@
     <string name="Descripcion">Descripción:</string>
     <string name="Liga">Liga:</string>
     <string name="Web">Web</string>
-    <string name="Verificado">VERIFICADO</string>
-    <string name="Ingresa">INGRESAR</string>
-    <string name="Registro">REGISTRO</string>
+
+
     <string name="Iniciar_sesion">Iniciar sesión</string>
     <string name="Usuario">Usuario: </string>
     <string name="Contraseña">Contraseña: </string>
@@ -97,7 +136,7 @@
     <string name="Mascotas">Mascotas</string>
     <string name="Fotos_lugar">Fotos del lugar</string>
 
-    <string name="Pregunta_Actividades_Realizas">¿Qué actividades realizas?</string>
+    <string name="Pregunta_Actividades_Realizas_Albergue">¿Qué actividades realizas en el albergue?</string>
     <string name="Descripcion_Actividades">Agrega una breve descripción de las actividades que realizas en el lugar </string>
     <string name="Foto_Actividades">Por favor, agrega una foto relacionada a las actividades que realizas</string>
 
@@ -110,6 +149,7 @@
     <string name="Lentes">Lentes de protección</string>
     <string name="Otros">Otros (+)</string>
 
+    <string name="Dias">Días disponibles</string>
     <string name="Lunes">Lunes</string>
     <string name="Martes">Martes</string>
     <string name="Miercoles">Miércoles</string>
@@ -128,28 +168,11 @@
 
     <string name="Enviar_registro">ENVIAR REGISTRO</string>
 
+    <!--Termina STRINGS FORMULARIO GENERAL 2-->
 
 
-    <!--    VERIFICAR SI SE USAN ESTOS STRINGS      -->
-    <string name="Direccion_centro_acopio">Dirección del centro de acopio</string>
-    <string name="Descripcion_centro_acopio">Descripción del centro de acopio</string>
-    <string name="Fotos_centro_acopio">Fotos del centro de acopio</string>
-    <string name="Archivo_imagen">Aquí va un archivo de imagen</string>
-    <string name="Pregunta_actividades_centro_acopio">¿Qué actividades realizas en el centro de acopio?</string>
-    <string name="Descripcion_actividades">Agrega una breve descripción de las actividades que realizas en el lugar</string>
-    <string name="Dias_disponibles">Días disponibles</string>
 
 
-    <string name="Administrador_albergue">Administrador de albergue</string>
-    <string name="Descripcion_administrador_albergue">Este tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.</string>
-    <string name="Direccion_albergue">Dirección del albergue</string>
-    <string name="Descripcion_albergue">Descripción del albergue</string>
-    <string name="Capacidad_albergue">Capacidad</string>
-
-    <string name="Pregunta_actividades_albergue">¿Qué actividades realizas en el albergue?</string>
-    <string name="Siguiente">Siguiente</string>
-    <string name="Lider_Brigadistas">Líder de brigadistas</string>
-    <string name="Descripción_Lider_Brigadistas">\nEste tipo de usuario tiene organizado un grupo de voluntarios con conocimientos adecuados capaces de ejercer como brigadistas. Tiene la información de otros voluntarios y es capaz de organizarlos para ayudar donde se necesite. Es capaz de compartir sus conocimientos a otras personas, por lo que puede organizar grupos de capacitación para sumarse a su equipo de trabajo. En la aplicación puede solicitar voluntarios para su grupo, convocar a cursos de capacitación o ponerse a disposición de otros usuarios para ayudar.\n</string>
 
 
 

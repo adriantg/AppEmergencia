@@ -29,7 +29,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_orange_light"
-                    android:text="verificado"
+                    android:text="@string/Verificado"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_orange_dark"
-                    android:text="Ingresa"
+                    android:text="@string/Ingresa"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold" />
 
@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:background="@android:color/holo_red_light"
-                    android:text="Registro"
+                    android:text="@string/Registro"
                     android:textColor="@color/colorPrimaryDark"
                     android:textStyle="bold" />
 
@@ -62,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Registro de usuarios"
+                android:text="@string/Registro_Usuario"
                 android:textAllCaps="false"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -71,7 +71,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="\nBienvenido, por favor ingresa tus datos en los siguientes campos:\n"
+                android:text="@string/Intruccion_Registro_Datos"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textSize="20sp"
@@ -82,7 +82,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Datos personales"
+                android:text="@string/Datos_Personales"
                 android:textAllCaps="false"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -96,7 +96,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apellido paterno: "
+                    android:text="@string/Apellido_Paterno"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -113,7 +113,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Apellido materno: "
+                    android:text="@string/Apellido_Materno"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -130,7 +130,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombre(s): "
+                    android:text="@string/Nombre"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -147,7 +147,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edad: "
+                    android:text="@string/Edad"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -164,7 +164,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ocupación: "
+                    android:text="@string/Ocupacion"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -182,7 +182,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="Sexo: "
+                    android:text="@string/Sexo"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -193,14 +193,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:text="Femenino"
+                    android:text="@string/Femenino"
                     android:onClick="Femenino"
                     android:textColor="@android:color/black" />
                 <CheckBox
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
-                    android:text="Masculino"
+                    android:text="@string/Masculino"
                     android:onClick="Masculino"
                     android:id="@+id/chk_Masculino"/>
             </LinearLayout>
@@ -211,7 +211,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nacionalidad: "
+                    android:text="@string/Nacionalidad"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -228,7 +228,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="CURP/ID: "
+                    android:text="@string/CURP_ID"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -241,7 +241,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Favor de anexar una imagen de tu identificación: "
+                android:text="@string/Anexar_Foto_Identificacion"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal"
@@ -257,7 +257,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calle "
+                    android:text="@string/Calle"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -274,7 +274,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Número exterior "
+                    android:text="@string/Numero_Exterior"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -291,7 +291,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Número interior "
+                    android:text="@string/Numero_Interiror"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -308,7 +308,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Colonia"
+                    android:text="@string/Colonia"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -325,7 +325,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Código postal"
+                    android:text="@string/Codigo_Postal"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -342,7 +342,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Delegación"
+                    android:text="@string/Delegacion"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -359,7 +359,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Estado"
+                    android:text="@string/Estado"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -372,7 +372,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Favor de anexar una imagen de tu comprobante de domicilio: "
+                android:text="@string/Anexar_Imagen_Comprobante_Domicilio"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
@@ -388,7 +388,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Teléfono local"
+                    android:text="@string/Telefono_Local"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -405,7 +405,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Celular"
+                    android:text="@string/Celular"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -422,7 +422,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Correo electrónico"
+                    android:text="@string/Correo_electronico"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -447,7 +447,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Persona de referencia"
+                    android:text="@string/Persona_Referencia"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -460,7 +460,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Nombre"
+                    android:text="@string/Nombre"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -477,7 +477,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Telefono"
+                    android:text="@string/Telefono"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -494,7 +494,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Correo electrónico"
+                    android:text="@string/Correo_electronico"
                     android:textAllCaps="false"
                     android:textSize="16sp"
                     android:textStyle="normal"
@@ -519,7 +519,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Actividades"
+                    android:text="@string/Actividades"
                     android:textAllCaps="false"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -529,7 +529,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selecciona uno de los siguientes campos, de acuerdo a la actividad que realizas "
+                android:text="@string/Instruccion_Selecciona_Actividad"
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
