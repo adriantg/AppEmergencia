@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/lyt_FormularioGeneral2"
     tools:context="com.example.adrian.appe.FormularioGeneral2">
 
     <ScrollView
@@ -254,11 +255,38 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_Certificado"/>
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:id="@+id/txt_FotoCertificado"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_FotoCertificado"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="@string/VistaPrevia"
+                            android:onClick="FotoCertificado"/>
+                        <Button
+                            android:id="@+id/btn_FotoCertificado"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Ingresa"
+                            android:layout_weight="3"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/vp_FotoCertificado">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:id="@+id/img_FotoCertificado"/>
+
+                    </LinearLayout>
                 </LinearLayout>
 
                 <!--Sección Transportes Solo Transporte-->
@@ -521,10 +549,38 @@
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
-                <EditText
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txt_FotoActividadesLider"/>
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chk_FotoActividadesLider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="@string/VistaPrevia"
+                        android:onClick="FotoActividadesLider"/>
+                    <Button
+                        android:id="@+id/btn_FotoActividadesLider"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Ingresa"
+                        android:layout_weight="3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/vp_FotoActividadesLider">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:id="@+id/img_FotoActividadesLider"/>
+
+                </LinearLayout>
 
 
                 <TextView
@@ -759,10 +815,38 @@
                 android:textSize="16sp"
                 android:textStyle="normal" />
             <!--Agregar archivo de imagen -->
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_FotosNuevoLugar"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_FotoNuevoLugar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:text="@string/VistaPrevia"
+                            android:onClick="FotoNuevoLugar"/>
+                        <Button
+                            android:id="@+id/btn_FotoNuevoLugar"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/Ingresa"
+                            android:layout_weight="3"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/vp_FotoNuevoLugar">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:id="@+id/img_FotoNuevoLugar"/>
+
+                    </LinearLayout>
                     <android.support.v4.widget.Space
                         android:layout_width="match_parent"
                         android:layout_height="20dp" />
@@ -799,11 +883,38 @@
                 android:textSize="16sp"
                 android:textStyle="normal"/>
             <!--Agregar archivo de imagen -->
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:id="@+id/txt_FotoActividades"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/chk_FotoActividades"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:text="@string/VistaPrevia"
+                        android:onClick="FotoActividades"/>
+                    <Button
+                        android:id="@+id/btn_FotoActividades"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Ingresa"
+                        android:layout_weight="3"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/vp_FotoActividades">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:id="@+id/img_FotoActividades"/>
+
+                </LinearLayout>
 
                 <!-- Sección equipo disponible Solo Zdesastre-->
                 <LinearLayout

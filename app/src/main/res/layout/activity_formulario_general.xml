@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/lyt_FormularioGeneral"
     tools:context="com.example.adrian.appe.FormularioGeneral">
 
 
@@ -245,11 +246,40 @@
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal"
-                android:textColor="@android:color/black"/>
-            <EditText
+                />
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txt_FotoID"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chk_FotoID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="@string/VistaPrevia"
+                    android:onClick="FotoID"/>
+                <Button
+                    android:id="@+id/btn_FotoID"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Ingresa"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/vp_FotoID">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/img_FotoID"/>
+
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -376,10 +406,38 @@
                 android:textAllCaps="false"
                 android:textSize="16sp"
                 android:textStyle="normal" />
-            <EditText
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txt_FotoDomicilio"/>
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chk_FotoDomicilio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:text="@string/VistaPrevia"
+                    android:onClick="FotoDomicilio"/>
+                <Button
+                    android:id="@+id/btn_FotoDomicilio"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Ingresa"
+                    android:layout_weight="3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/vp_FotoDomicilio">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/img_FotoDomicilio"/>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

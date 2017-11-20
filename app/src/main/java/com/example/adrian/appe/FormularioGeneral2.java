@@ -1,26 +1,53 @@
 package com.example.adrian.appe;
 
+import android.annotation.TargetApi;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.Image;
+import android.media.MediaScannerConnection;
+import android.net.Uri;
+import android.os.Build;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
+import static android.Manifest.permission.CAMERA;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
 public class FormularioGeneral2 extends AppCompatActivity {
+
+    private String APP_DIRECTORY= "AppE/";
+    private String MEDIA_DIRECTORY = APP_DIRECTORY + "ImagenesAppE";
+    private final int MY_PERMISSIONS = 10;
+    private final int PHOTO_CODE = 20;
+    private final int SELECT_PICTURE = 30;
+    private String mPath;
+    private Bitmap camara;
+    private int indFotos;
 
     String Actividad;
     ArrayList<String> ArrayMiembros;
@@ -31,7 +58,19 @@ public class FormularioGeneral2 extends AppCompatActivity {
     Button btnIngresa;
     Button btnAgregarMiembro;
 
+    Button btnFotoCertficado;
+    Button btnFotoActividadesLider;
+    Button btnFotoNuevoLugar;
+    Button btnFotoActividades;
+
     //COMPLETADO sección de Layout
+    LinearLayout lytFormularioGeneral2;
+
+    LinearLayout vpFotoCertificado;
+    LinearLayout vpFotoActividadesLider;
+    LinearLayout vpFotoNuevoLugar;
+    LinearLayout vpFotoActividades;
+
     LinearLayout lytSeccionWeb;
     LinearLayout lytSeccionLider;
     LinearLayout lytSeccionCertificados;
@@ -47,6 +86,11 @@ public class FormularioGeneral2 extends AppCompatActivity {
     TextView txtDescripcion;
 
     // COMPLETADO Sección de Checkbox
+    CheckBox chkFotoCertificado;
+    CheckBox chkFotoActividadesLider;
+    CheckBox chkFotoNuevoLugar;
+    CheckBox chkFotoActividades;
+
     CheckBox chkFacebook;
     CheckBox chkTwitter;
     CheckBox chkInstagram;
@@ -112,7 +156,6 @@ public class FormularioGeneral2 extends AppCompatActivity {
     //Seccción EDITTEXT
     EditText txtExperiencia;  //VERIFICAR ID CON CHK
     EditText txtCertificados;
-    EditText txtFotoCertificado; //Cambiar por un archivo de imagen
     EditText txtAutomovil;
     EditText txtMotocicleta;
     EditText txtBicicleta;
@@ -121,14 +164,17 @@ public class FormularioGeneral2 extends AppCompatActivity {
     EditText txtVan;
     EditText txtOtros;
     EditText txtNombreMiembro;
-    EditText txtFotoActividadesLider; //Cambiar por un archivo de imagen
     EditText txtDireccionNuevoLugar;
     EditText txtDescripcionNuevoLugar;
     EditText txtCapacidadAlbergue; //VERIFICAR ID CON CHK
-    EditText txtFotosNuevoLugar; //Cambiar por un archivo de imagen
     EditText txtDescripcionActividadesRealizadas;
-    EditText txtFotoActividades; //Cambiar por un archivo de imagen
     EditText txtOtroEquipo;
+
+    //Seccion ImageView
+    ImageView imgFotoCertificado;
+    ImageView imgFotoActividadesLider;
+    ImageView imgFotoNuevoLugar;
+    ImageView imgFotoActividades;
 
     //Variables para guardar la información
     String ID;
@@ -179,7 +225,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
 
     String Experiencia;  //VERIFICAR ID CON CHK
     String Certificados;
-    String FotoCertificado; //Cambiar por un archivo de imagen
+    byte[] FotoCertificado; //Cambiar por un archivo de imagen
     String Automovil;
     String Motocicleta;
     String Bicicleta;
@@ -188,13 +234,13 @@ public class FormularioGeneral2 extends AppCompatActivity {
     String Van;
     String Otros;
     String Miembros;
-    String FotoActividadesLider; //Cambiar por un archivo de imagen
+    byte[] FotoActividadesLider; //Cambiar por un archivo de imagen
     String DireccionNuevoLugar;
     String DescripcionNuevoLugar;
     String CapacidadAlbergue; //VERIFICAR ID CON CHK
-    String FotosNuevoLugar; //Cambiar por un archivo de imagen
+    byte[] FotoNuevoLugar; //Cambiar por un archivo de imagen
     String DescripcionActividadesRealizadas;
-    String FotoActividades; //Cambiar por un archivo de imagen
+    byte[] FotoActividades; //Cambiar por un archivo de imagen
     String OtroEquipo;
 
 
@@ -213,13 +259,53 @@ public class FormularioGeneral2 extends AppCompatActivity {
         //Control de lo que se despliega y lo que no
         CargarViews();
 
-
+        if(obtenerPermisos()){
+            btnFotoCertficado.setEnabled(true);
+            btnFotoActividadesLider.setEnabled(true);
+            btnFotoNuevoLugar.setEnabled(true);
+            btnFotoActividades.setEnabled(true);
+        }
+        else{
+            btnFotoCertficado.setEnabled(false);
+            btnFotoActividadesLider.setEnabled(false);
+            btnFotoNuevoLugar.setEnabled(false);
+            btnFotoActividades.setEnabled(false);
+        }
 
         btnRegresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(FormularioGeneral2.this,FormularioGeneral.class);
                 startActivity(intent);
+            }
+        });
+
+        btnFotoCertficado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                indFotos=0;
+                mostrarOpciones();
+            }
+        });
+        btnFotoActividadesLider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                indFotos=1;
+                mostrarOpciones();
+            }
+        });
+        btnFotoNuevoLugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                indFotos=2;
+                mostrarOpciones();
+            }
+        });
+        btnFotoActividades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                indFotos=3;
+                mostrarOpciones();
             }
         });
 
@@ -231,8 +317,6 @@ public class FormularioGeneral2 extends AppCompatActivity {
                 Toast.makeText(FormularioGeneral2.this,"Miembro agregado",Toast.LENGTH_SHORT).show();
             }
         });
-
-
 
         btnEnviarRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -248,8 +332,177 @@ public class FormularioGeneral2 extends AppCompatActivity {
             }
         });
 
+    }
 
+    private boolean obtenerPermisos(){
+        if(Build.VERSION.SDK_INT<Build.VERSION_CODES.M){
+            return true;
+        }
 
+        if((checkSelfPermission(WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED)
+                &&(checkSelfPermission(CAMERA)== PackageManager.PERMISSION_GRANTED)){
+            return true;
+        }
+
+        if((shouldShowRequestPermissionRationale(WRITE_EXTERNAL_STORAGE))||(shouldShowRequestPermissionRationale(CAMERA))){
+            Snackbar.make(lytFormularioGeneral2,"Los permisos son necesarios para recabar la información",
+                    Snackbar.LENGTH_INDEFINITE).setAction(android.R.string.ok, new View.OnClickListener() {
+                @TargetApi(Build.VERSION_CODES.M)
+                @Override
+                public void onClick(View v) {
+                    requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE,CAMERA},MY_PERMISSIONS);
+                }
+            }).show();
+        }
+        else{
+            requestPermissions(new String[]{WRITE_EXTERNAL_STORAGE,CAMERA},MY_PERMISSIONS);
+        }
+
+        return false;
+    }
+
+    private void mostrarOpciones(){
+        final CharSequence[] opciones={"Tomar foto","Elegir de galería","Cancelar"};
+        final AlertDialog.Builder builder=new AlertDialog.Builder(FormularioGeneral2.this);
+        builder.setTitle("Elige una opción.");
+        builder.setItems(opciones, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if(opciones[which]=="Tomar foto"){
+                    openCamera();
+                }
+                else if(opciones[which]=="Elegir de galería"){
+                    Intent intent=new Intent(Intent.ACTION_PICK,android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    intent.setType("image/*");
+                    startActivityForResult(intent.createChooser(intent,"Selecciona App de imágenes"),SELECT_PICTURE);
+                }
+                else{
+                    dialog.dismiss();
+                }
+
+            }
+        });
+
+        builder.show();
+
+    }
+
+    private void openCamera() {
+        File file=new File(Environment.getExternalStorageDirectory(),MEDIA_DIRECTORY);
+        boolean isDirectoryCreated=file.exists();
+
+        if(!isDirectoryCreated){
+            isDirectoryCreated=file.mkdirs();
+        }
+        if(isDirectoryCreated){
+            Long timestamp=System.currentTimeMillis()/1000;
+            String imageName=timestamp.toString()+".jpg";
+
+            mPath=Environment.getExternalStorageDirectory() + File.separator + MEDIA_DIRECTORY +
+                    File.separator + imageName;
+
+            File newFile=new File(mPath);
+
+            Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(newFile));
+            startActivityForResult(intent,PHOTO_CODE);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(resultCode==RESULT_OK){
+            switch (requestCode){
+                case PHOTO_CODE:
+                    MediaScannerConnection.scanFile(this, new String[]{mPath}, null, new MediaScannerConnection.OnScanCompletedListener() {
+                        @Override
+                        public void onScanCompleted(String path, Uri uri) {
+                            Log.i("External Storage","Scanned "+path+": ");
+                            Log.i("External Storage","--> Uri= "+uri);
+                        }
+                    });
+
+                    camara= BitmapFactory.decodeFile(mPath);
+                    break;
+
+                case SELECT_PICTURE:
+                    try{
+                        camara=MediaStore.Images.Media.getBitmap(this.getContentResolver(),data.getData());
+                    }
+                    catch (IOException e){
+
+                    }
+                    finally {
+                        break;
+                    }
+            }
+
+            switch (indFotos){
+                case 0:
+                    imgFotoCertificado.setImageBitmap(camara);
+                    FotoCertificado=getBytes(camara);
+                    break;
+                case 1:
+                    imgFotoActividadesLider.setImageBitmap(camara);
+                    FotoActividadesLider=getBytes(camara);
+                    break;
+                case 2:
+                    imgFotoNuevoLugar.setImageBitmap(camara);
+                    FotoNuevoLugar=getBytes(camara);
+                    break;
+                case 3:
+                    imgFotoActividades.setImageBitmap(camara);
+                    FotoActividades=getBytes(camara);
+                    break;
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if(requestCode==MY_PERMISSIONS){
+            if(grantResults.length==2 && grantResults[0]==PackageManager.PERMISSION_GRANTED
+                    && grantResults[1]==PackageManager.PERMISSION_GRANTED){
+                Toast.makeText(FormularioGeneral2.this, "Permisos aceptados", Toast.LENGTH_SHORT).show();
+                btnFotoCertficado.setEnabled(true);
+                btnFotoActividadesLider.setEnabled(true);
+                btnFotoNuevoLugar.setEnabled(true);
+                btnFotoActividades.setEnabled(true);
+            }
+        }
+        else{
+            mostrarExpPermisos();
+        }
+
+    }
+
+    private void mostrarExpPermisos() {
+        AlertDialog.Builder  builder= new AlertDialog.Builder(this);
+        builder.setTitle("Permisos denegados");
+        builder.setMessage("Para llenar correctamente el formulario es necesario conceder los permisos.");
+        builder.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent=new Intent();
+                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                Uri uri=Uri.fromParts("package",getPackageName(),null);
+                intent.setData(uri);
+                startActivity(intent);
+            }
+        });
+
+        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                finish();
+            }
+        });
+        builder.show();
     }
 
     private void Instanciar() {
@@ -259,7 +512,20 @@ public class FormularioGeneral2 extends AppCompatActivity {
         btnIngresa=(Button)findViewById(R.id.btn_IngresarMiembro);
         btnAgregarMiembro=(Button)findViewById((R.id.btn_IngresarMiembro));
 
+        btnFotoCertficado=(Button)findViewById(R.id.btn_FotoCertificado);
+        btnFotoActividadesLider=(Button)findViewById((R.id.btn_FotoActividadesLider));
+        btnFotoNuevoLugar=(Button)findViewById(R.id.btn_FotoNuevoLugar);
+        btnFotoActividades=(Button)findViewById(R.id.btn_FotoActividades);
+
         ArrayMiembros=new ArrayList<String>();
+
+        //Seccion Layout
+        lytFormularioGeneral2=(LinearLayout)findViewById(R.id.lyt_FormularioGeneral2);
+
+        vpFotoCertificado=(LinearLayout)findViewById(R.id.vp_FotoCertificado);
+        vpFotoActividadesLider=(LinearLayout)findViewById(R.id.vp_FotoActividadesLider);
+        vpFotoNuevoLugar=(LinearLayout)findViewById(R.id.vp_FotoNuevoLugar);
+        vpFotoActividades=(LinearLayout)findViewById(R.id.vp_FotoActividades);
 
         lytSeccionWeb=(LinearLayout)findViewById(R.id.Seccion_Web);
 
@@ -277,7 +543,19 @@ public class FormularioGeneral2 extends AppCompatActivity {
         txtTitulo=(TextView)findViewById(R.id.txt_TituloActividad);
         txtDescripcion=(TextView)findViewById(R.id.txt_DescripcionActividad);
 
+        //Seccion ImageView
+        imgFotoCertificado=(ImageView)findViewById(R.id.img_FotoCertificado);
+        imgFotoActividadesLider=(ImageView)findViewById(R.id.img_FotoActividadesLider);
+        imgFotoNuevoLugar=(ImageView)findViewById(R.id.img_FotoNuevoLugar);
+        imgFotoActividades=(ImageView)findViewById(R.id.img_FotoActividades);
+
         // COMPLETADO Sección de checkbox
+        chkFotoCertificado=(CheckBox)findViewById(R.id.chk_FotoCertificado);
+        chkFotoActividadesLider=(CheckBox)findViewById(R.id.chk_FotoActividadesLider);
+        chkFotoNuevoLugar=(CheckBox)findViewById(R.id.chk_FotoNuevoLugar);
+        chkFotoActividades=(CheckBox)findViewById(R.id.chk_FotoActividades);
+
+
         chkFacebook=(CheckBox)findViewById(R.id.chk_Facebook);
         chkTwitter=(CheckBox)findViewById(R.id.chk_Twitter);
         chkInstagram=(CheckBox)findViewById(R.id.chk_Instagram);
@@ -343,7 +621,6 @@ public class FormularioGeneral2 extends AppCompatActivity {
         // COMPLETADO Sección de editText
         txtExperiencia=(EditText) findViewById(R.id.txt_Experiencia);
         txtCertificados=(EditText) findViewById(R.id.txt_Certificado);
-        txtFotoCertificado=(EditText) findViewById(R.id.txt_FotoCertificado);//Cambiar por un archivo de imagen
         txtAutomovil=(EditText) findViewById(R.id.txt_Auto);
         txtMotocicleta=(EditText) findViewById(R.id.txt_Moto);
         txtBicicleta=(EditText) findViewById(R.id.txt_Bici);
@@ -352,13 +629,10 @@ public class FormularioGeneral2 extends AppCompatActivity {
         txtVan=(EditText) findViewById(R.id.txt_Van);
         txtOtros=(EditText) findViewById(R.id.txt_Otrobrigadista);
         txtNombreMiembro=(EditText) findViewById(R.id.txt_NombreMiembro);
-        txtFotoActividadesLider=(EditText) findViewById(R.id.txt_FotoActividadesLider);//Cambiar por un archivo de imagen
         txtDireccionNuevoLugar=(EditText) findViewById(R.id.txt_DireccionNuevoLugar);
         txtDescripcionNuevoLugar=(EditText) findViewById(R.id.txt_DescripcionNuevoLugar);
         txtCapacidadAlbergue=(EditText) findViewById(R.id.txt_CapacidadAlbergue);
-        txtFotosNuevoLugar=(EditText) findViewById(R.id.txt_FotosNuevoLugar);//Cambiar por un archivo de imagen
         txtDescripcionActividadesRealizadas=(EditText) findViewById(R.id.txt_DescripcionActividadesRealizadas);
-        txtFotoActividades=(EditText) findViewById(R.id.txt_FotoActividades);
         txtOtroEquipo=(EditText) findViewById(R.id.txt_OtroEquipo);
 
     }
@@ -367,7 +641,6 @@ public class FormularioGeneral2 extends AppCompatActivity {
     private void ExtraerData(){
         Experiencia=txtExperiencia.getText().toString();
         Certificados=txtCertificados.getText().toString();
-        FotoCertificado=txtFotoCertificado.getText().toString();
         Automovil=txtAutomovil.getText().toString();
         Motocicleta=txtMotocicleta.getText().toString();
         Bicicleta=txtBicicleta.getText().toString();
@@ -375,13 +648,10 @@ public class FormularioGeneral2 extends AppCompatActivity {
         Camioneta=txtCamioneta.getText().toString();
         Van=txtVan.getText().toString();
         Otros=txtOtros.getText().toString();
-        FotoActividadesLider=txtFotoActividadesLider.getText().toString();
         DireccionNuevoLugar=txtDireccionNuevoLugar.getText().toString();
         DescripcionNuevoLugar=txtDescripcionNuevoLugar.getText().toString();
         CapacidadAlbergue=txtCapacidadAlbergue.getText().toString();
-        FotosNuevoLugar=txtFotosNuevoLugar.getText().toString();
         DescripcionActividadesRealizadas=txtDescripcionActividadesRealizadas.getText().toString();
-        FotoActividades=txtFotoActividades.getText().toString();
         OtroEquipo=txtOtroEquipo.getText().toString();
         Miembros=convertArrayToString(ArrayMiembros);
     }
@@ -455,7 +725,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
         registro.put("DireccionNuevoLugar",DireccionNuevoLugar);
         registro.put("DescripcionNuevoLugar",DescripcionNuevoLugar);
         registro.put("CapacidadAlbergue",CapacidadAlbergue);
-        registro.put("FotosNuevoLugar",FotosNuevoLugar);
+        registro.put("FotoNuevoLugar",FotoNuevoLugar);
         registro.put("DescripcionActividadesRealizadas",DescripcionActividadesRealizadas);
         registro.put("FotoActividades",FotoActividades);
         registro.put("OtroEquipo",OtroEquipo);
@@ -468,6 +738,11 @@ public class FormularioGeneral2 extends AppCompatActivity {
 
     //CARGAR SECCIONES
     private void CargarViews(){
+
+        vpFotoCertificado.setVisibility(View.GONE);
+        vpFotoActividadesLider.setVisibility(View.GONE);
+        vpFotoNuevoLugar.setVisibility(View.GONE);
+        vpFotoActividades.setVisibility(View.GONE);
 
         if(Actividad.equals("Usuario Web")){
             txtTitulo.setText("Usuario web");
@@ -546,6 +821,40 @@ public class FormularioGeneral2 extends AppCompatActivity {
         }
         else{
             lytSeccionAgregarLugar.setVisibility(View.GONE);
+        }
+    }
+
+    //Vistas Previas Imagenes
+    public void FotoCertificado(View Checkbox){
+        if(chkFotoCertificado.isChecked()){
+            vpFotoCertificado.setVisibility(View.VISIBLE);
+        }
+        else{
+            vpFotoCertificado.setVisibility(View.GONE);
+        }
+    }
+    public void FotoActividadesLider(View Checkbox){
+        if(chkFotoActividadesLider.isChecked()){
+            vpFotoActividadesLider.setVisibility(View.VISIBLE);
+        }
+        else{
+            vpFotoActividadesLider.setVisibility(View.GONE);
+        }
+    }
+    public void FotoNuevoLugar(View Checkbox){
+        if(chkFotoNuevoLugar.isChecked()){
+            vpFotoNuevoLugar.setVisibility(View.VISIBLE);
+        }
+        else{
+            vpFotoNuevoLugar.setVisibility(View.GONE);
+        }
+    }
+    public void FotoActividades(View Checkbox){
+        if(chkFotoActividades.isChecked()){
+            vpFotoActividades.setVisibility(View.VISIBLE);
+        }
+        else{
+            vpFotoActividades.setVisibility(View.GONE);
         }
     }
 
@@ -1039,6 +1348,18 @@ public class FormularioGeneral2 extends AppCompatActivity {
     public static String[] convertStringToArray(String str){
         String[] arr = str.split(Separador);
         return arr;
+    }
+
+    // convert from bitmap to byte array
+    public static byte[] getBytes(Bitmap bitmap) {
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
+        return stream.toByteArray();
+    }
+
+    // convert from byte array to bitmap
+    public static Bitmap getImage(byte[] image) {
+        return BitmapFactory.decodeByteArray(image, 0, image.length);
     }
 
 }
