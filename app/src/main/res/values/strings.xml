@@ -53,10 +53,10 @@
     <string name="Correo_electronico">Correo electrónico:</string>
 
     <string name="Pregunta_Redes_Sociales">¿Qué redes sociales manejas?</string>
-    <string name="Facebook">Facebook:</string>
-    <string name="Twitter">Twitter:</string>
-    <string name="Instagram">Instagram:</string>
-    <string name="Snapchat">Snapchat:</string>
+    <string name="Facebook">Facebook</string>
+    <string name="Twitter">Twitter</string>
+    <string name="Instagram">Instagram</string>
+    <string name="Snapchat">Snapchat</string>
 
     <string name="Pregunta_Intitucion_Cubrir">¿Qué institución te gustaría cubrir?</string>
     <string name="Proteccion_Civil">Protección Civil</string>
@@ -137,7 +137,7 @@
     <string name="Mascotas">Mascotas</string>
     <string name="Fotos_lugar">Fotos del lugar</string>
 
-    <string name="Pregunta_Actividades_Realizas_Albergue">¿Qué actividades realizas en el albergue?</string>
+    <string name="Pregunta_Actividades_Realizas_Albergue">¿Qué actividades realizas en el lugar?</string>
     <string name="Descripcion_Actividades">Agrega una breve descripción de las actividades que realizas en el lugar </string>
     <string name="Foto_Actividades">Por favor, agrega una foto relacionada a las actividades que realizas</string>
 

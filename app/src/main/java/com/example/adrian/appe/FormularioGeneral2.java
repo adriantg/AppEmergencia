@@ -777,7 +777,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
             lytSeccionLugarActividades.setVisibility(View.GONE);
         }
         else if(Actividad.equals("Información desastre")){
-            txtTitulo.setText("Voluntatrio en zona de desastre");
+            txtTitulo.setText("Voluntario en zona de desastre");
             txtDescripcion.setText("\nEste tipo de usuario es el encargado de estar presente en una zona de afectación, por ejemplo: zona de derrumbe o inundación. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe reportar sucesos relevantes, como identificación de las personas afectadas y el estado de las mismas.\n");
             lytSeccionWeb.setVisibility(View.GONE);
             lytSeccionLider.setVisibility(View.GONE);
@@ -787,7 +787,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
 
         }
         else if(Actividad.equals("Información albergue")){
-            txtTitulo.setText("Voluntatrio en albergue");
+            txtTitulo.setText("Voluntario en albergue");
             txtDescripcion.setText("\nEste tipo de usuario es el encargado de estar presente en un albergue. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el albergue.\n");
             lytSeccionWeb.setVisibility(View.GONE);
             lytSeccionLider.setVisibility(View.GONE);
@@ -796,7 +796,7 @@ public class FormularioGeneral2 extends AppCompatActivity {
 
         }
         else if(Actividad.equals("Información acopio")){
-            txtTitulo.setText("Voluntatrio en centro de acopio");
+            txtTitulo.setText("Voluntario en centro de acopio");
             txtDescripcion.setText("\nEste tipo de usuario es el encargado de estar presente en un centro de acopio. Tiene la tarea de reportar las necesidades del lugar en tiempo real, tanto de bienes materiales como de recursos humanos. Debe ser un usuario que esté familiarizado con el trabajo en el centro de acopio.\n");
             lytSeccionWeb.setVisibility(View.GONE);
             lytSeccionLider.setVisibility(View.GONE);
